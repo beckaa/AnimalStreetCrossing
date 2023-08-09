@@ -1,5 +1,7 @@
 # AnimalStreetCrossing
-##Used Assets
+This is a 3D unity game which was inspired the classical game frogger.
+
+## Used Assets
 We used the following free assets from unity:
 https://assetstore.unity.com/packages/3d/environments/urban/modular-lowpoly-streets-free-192094
 https://assetstore.unity.com/packages/3d/vehicles/land/low-poly-cars-101798
