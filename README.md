@@ -5,6 +5,9 @@ Please do not work on main -> main should hold a stable version
 
 Create your own new Branch which can later be merged.
 
+Dev Branch holds first merge versions. They may need debugging !!!!!
+If they are debugged they can be merged into main.
+
 ## Used Assets
 We used the following free assets from unity:
 
