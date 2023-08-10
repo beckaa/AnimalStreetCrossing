@@ -35,8 +35,15 @@ public class Player : MonoBehaviour
         {
             transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
         }
-        
-
-        
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "car")
+        {
+            Debug.Log("You hit a car");
+            //TODO insert death method + reduce life
+        }
+    }
+
 }
