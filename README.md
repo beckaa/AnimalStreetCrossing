@@ -1,5 +1,8 @@
 # AnimalStreetCrossing
 This is a 3D unity game which was inspired the classical game frogger.
+# Coding Rule
+Please do not work on main -> main should hold a stable version
+Create your own new Branch which can later be merged.
 
 ## Used Assets
 We used the following free assets from unity:
