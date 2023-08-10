@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_1_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 116448, guid: bd428ed7f76466742916f85241c6bf17, type: 3}
+      propertyPath: m_TagString
+      value: car
+      objectReference: {fileID: 0}
     - target: {fileID: 485172, guid: bd428ed7f76466742916f85241c6bf17, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -814,6 +818,10 @@ PrefabInstance:
     - target: {fileID: 116448, guid: bd428ed7f76466742916f85241c6bf17, type: 3}
       propertyPath: m_Name
       value: Car_1_Blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 116448, guid: bd428ed7f76466742916f85241c6bf17, type: 3}
+      propertyPath: m_TagString
+      value: car
       objectReference: {fileID: 0}
     - target: {fileID: 485172, guid: bd428ed7f76466742916f85241c6bf17, type: 3}
       propertyPath: m_RootOrder
