@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     float xInput;
     float zInput;
     public Animator animator;
-    private Vector3 currentPosition;
     public float movementSpeed;
     void Start()
     {
@@ -30,7 +29,6 @@ public class Player : MonoBehaviour
         {
             transform.Rotate(0, Time.deltaTime * -40*2, 0);
         }
-       currentPosition = transform.position;
         if (zInput > 0)
         {
             transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
