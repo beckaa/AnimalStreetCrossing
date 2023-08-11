@@ -8,13 +8,18 @@ public class Player : MonoBehaviour
     float zInput;
     public Animator animator;
     public float movementSpeed;
+    public int life = 3;
     void Start()
     {
-        movementSpeed = 5f;
+        if (movementSpeed == 0)
+        {
+            movementSpeed = 5f;
+        }
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //get PlayerInput
        xInput = Input.GetAxis("Horizontal");
@@ -31,16 +36,34 @@ public class Player : MonoBehaviour
         }
         if (zInput > 0)
         {
-            transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
+             transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "car")
         {
-            Debug.Log("You hit a car");
-            //TODO insert death method + reduce life
+            Debug.Log(life);
+            if (life == 0)
+            {
+                animator.SetBool("Death", true);
+                Time.timeScale = 0;
+                //game ends -> make end screen
+            }
+            else
+            {
+                animator.SetBool("damage", true);
+                life -= 1;
+            }
+            
+        }
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if(other.gameObject.tag == "car")
+        {
+            animator.SetBool("damage", false);
         }
     }
 
