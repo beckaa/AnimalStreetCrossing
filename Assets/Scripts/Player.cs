@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public float movementSpeed;
     public int life = 3;
+    GameObject lastCollided;
     void Start()
     {
         if (movementSpeed == 0)
@@ -42,9 +43,9 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "car")
+        if(other.gameObject.tag == "car" && other.gameObject!=lastCollided)
         {
-            Debug.Log(life);
+            lastCollided = other.gameObject;
             if (life == 0)
             {
                 animator.SetBool("Death", true);
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("damage", true);
                 life -= 1;
+                Debug.Log(life);
             }
             
         }
@@ -65,6 +67,6 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("damage", false);
         }
+        lastCollided = null;
     }
-
 }
