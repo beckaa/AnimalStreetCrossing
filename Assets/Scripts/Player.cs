@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "river")
         {
             detectDamage(other);
-            waitTime = time + 5;
+            waitTime = time + 2;
             lastCollided = other.gameObject;
             resetPosition = true;
             resetPlayer();
