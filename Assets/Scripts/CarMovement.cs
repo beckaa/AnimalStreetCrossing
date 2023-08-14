@@ -5,11 +5,11 @@ using UnityEngine;
 public class CarMovement : MonoBehaviour
 {
     public float speed;
-    float initialSpeed;
-    bool hitSomething;
-    Vector3 position;
-    float time;
-    float waitTime;
+    private float initialSpeed;
+    private bool hitSomething;
+    private Vector3 position;
+   private float time;
+    private float waitTime;
     // Start is called before the first frame update
     void Start()
     {

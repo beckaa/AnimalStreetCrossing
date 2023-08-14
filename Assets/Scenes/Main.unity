@@ -769,7 +769,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!4 &300051724 stripped
 Transform:
@@ -2560,7 +2560,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1001 &1243415302
 PrefabInstance:
@@ -4151,6 +4151,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1972535159}
     m_Modifications:
+    - target: {fileID: 980613756, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 980613760, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 1796978087558652753, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
       propertyPath: m_RootOrder
       value: 1
