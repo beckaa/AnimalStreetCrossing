@@ -7,6 +7,7 @@ TagManager:
   - car
   - barrier
   - river
+  - bridge
   layers:
   - Default
   - TransparentFX

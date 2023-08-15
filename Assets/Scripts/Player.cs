@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     float waitTime;
     bool resetPosition;
     float time;
+    Rigidbody rb;
+    bool walkingOnObject;
 
     void Start()
     {
@@ -20,16 +22,19 @@ public class Player : MonoBehaviour
         {
             movementSpeed = 5f;
         }
-        
+        rb = this.GetComponent<Rigidbody>();
+        walkingOnObject = false;
+
         
     }
+
     void FixedUpdate()
     {
         //get PlayerInput
        xInput = Input.GetAxis("Horizontal");
        zInput = Input.GetAxis("Vertical");
        movePlayer();
-        rotatePlayerWithTerrain();
+        
     }
     private void Update()
     {
@@ -37,11 +42,16 @@ public class Player : MonoBehaviour
         {
             resetPlayer();
         }
-        alignPlayerToTerrainHeight();
         time += Time.deltaTime;
+        if (!walkingOnObject)
+        {
+            rotatePlayerWithTerrain();
+            alignPlayerToTerrainHeight();
+        }
     }
     void alignPlayerToTerrainHeight()
     {
+        //TODO if player walks on an object you can not use terrain height !!!
         //get height of terrain at the current player position
         float height = Terrain.activeTerrain.SampleHeight(transform.position);
         //set player to terrain height + player sprite height
@@ -60,6 +70,16 @@ public class Player : MonoBehaviour
     }
     void movePlayer()
     {
+        if (xInput == 0 && zInput == 0)
+        {
+            //freeze position
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+        }
         animator.SetFloat("forwards", zInput);
         if (xInput >= 1)
         {
@@ -79,6 +99,17 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "car" && other.gameObject!=lastCollided)
         {
             detectDamage(other); 
+        }
+        if (other.gameObject.tag == "bridge")
+        {
+            walkingOnObject = true;
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "bridge")
+        {
+            walkingOnObject = true;
         }
     }
     void detectDamage(Collision other)
@@ -116,6 +147,10 @@ public class Player : MonoBehaviour
     private void OnCollisionExit(Collision other)
     {
         stopDamage(other);
+        if (other.gameObject.tag == "bridge")
+        {
+            walkingOnObject = false;
+        }
     }
     void stopDamage(Collision other)
     {
@@ -128,7 +163,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "river")
+        if (other.gameObject.tag == "river" && !walkingOnObject)
         {
             detectDamage(other);
             waitTime = time + 2;
