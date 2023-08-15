@@ -6,8 +6,6 @@ TagManager:
   tags:
   - car
   - barrier
-  - river
-  - bridge
   layers:
   - Default
   - TransparentFX
@@ -17,7 +15,7 @@ TagManager:
   - UI
   - barrier
   - cars
-  - 
+  - collectibles
   - 
   - 
   - 
