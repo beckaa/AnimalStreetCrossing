@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     float time;
     Rigidbody rb;
     bool walkingOnObject;
-
     public int getLife()
     {
         return life;
