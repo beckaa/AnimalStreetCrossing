@@ -7,9 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2359924578718258495, guid: c80fbf850ad97a34694544deb65b7fa2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8439506048520143327, guid: c80fbf850ad97a34694544deb65b7fa2, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_plums Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439506048520143327, guid: c80fbf850ad97a34694544deb65b7fa2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562572573934374867, guid: c80fbf850ad97a34694544deb65b7fa2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757141357260219641, guid: c80fbf850ad97a34694544deb65b7fa2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9103171939639073637, guid: c80fbf850ad97a34694544deb65b7fa2, type: 3}
       propertyPath: m_RootOrder
@@ -71,8 +87,22 @@ MeshCollider:
   m_GameObject: {fileID: 515901901769771870}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6277127589373287680, guid: 0ef9f3b550a8ffd40ab0be1ae6034fe1, type: 3}
+--- !u!136 &6863570910899766859
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515901901769771870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.640209
+  m_Height: 2.4560056
+  m_Direction: 1
+  m_Center: {x: 0.033578217, y: 0.7280028, z: -0.1066308}

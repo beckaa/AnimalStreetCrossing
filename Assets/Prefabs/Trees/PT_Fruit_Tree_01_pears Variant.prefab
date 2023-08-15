@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3186936353867649492, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3846706287665124168, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -51,9 +55,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4038288260421782749, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4479373333862468082, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_pears Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479373333862468082, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614760765642589681, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
@@ -62,6 +78,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4479373333862468082, guid: a2e14d87834a62041a457f0dcc62b265, type: 3}
   m_PrefabInstance: {fileID: 1299802951872641582}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &-6735923976889626349
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179609187028415452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7279991
+  m_Height: 3.714158
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.3343804, z: -0.028198123}
 --- !u!64 &5043510298428425533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71,7 +101,7 @@ MeshCollider:
   m_GameObject: {fileID: 3179609187028415452}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30

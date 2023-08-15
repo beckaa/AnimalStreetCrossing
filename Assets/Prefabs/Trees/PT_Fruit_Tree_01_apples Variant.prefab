@@ -7,9 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 763320970752340511, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879441087148804609, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904086408796303113, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7335176420224820531, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_apples Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335176420224820531, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7962391335428833161, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
       propertyPath: m_RootOrder
@@ -63,6 +79,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7335176420224820531, guid: fe0c38f5305f2e14ca7e033eed8192aa, type: 3}
   m_PrefabInstance: {fileID: 1500820800837979976}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1838222146919769934
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149321276614601339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7636032
+  m_Height: 3.7022629
+  m_Direction: 1
+  m_Center: {x: 0.005722046, y: 1.0347786, z: 0}
 --- !u!64 &7473102804531523949
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72,7 +102,7 @@ MeshCollider:
   m_GameObject: {fileID: 8149321276614601339}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
