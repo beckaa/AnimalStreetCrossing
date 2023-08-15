@@ -180,6 +180,12 @@ public class Player : MonoBehaviour
             animator.SetBool("damage", false);
             lastCollided = null;
             resetPosition = false;
+            if (life == 0)
+            {
+                animator.SetBool("Death", true);
+                Time.timeScale = 0;
+                //game ends -> make end screen
+            }
         }
     }
 }
