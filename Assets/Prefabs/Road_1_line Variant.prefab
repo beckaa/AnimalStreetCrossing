@@ -65,6 +65,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499614720051398550, guid: dfec8d9b723b08e4ab4463a1b8f9cd7d, type: 3}
       propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499614720051398550, guid: dfec8d9b723b08e4ab4463a1b8f9cd7d, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8499614720051398550, guid: dfec8d9b723b08e4ab4463a1b8f9cd7d, type: 3}
@@ -73,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499614720051398551, guid: dfec8d9b723b08e4ab4463a1b8f9cd7d, type: 3}
       propertyPath: m_Name
-      value: Road_1_line
+      value: Road_1_line Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfec8d9b723b08e4ab4463a1b8f9cd7d, type: 3}

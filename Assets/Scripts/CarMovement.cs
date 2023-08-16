@@ -8,11 +8,12 @@ public class CarMovement : MonoBehaviour
     private float initialSpeed;
     private bool hitSomething;
     private Vector3 position;
-   private float time;
+    private float time;
     private float waitTime;
     // Start is called before the first frame update
     void Start()
     {
+        //save the initial speed to set it back to originalspeed after collision
         initialSpeed = speed;
     }
 
@@ -30,8 +31,9 @@ public class CarMovement : MonoBehaviour
             speed = initialSpeed;
         }
         time += Time.deltaTime;
-        
+
     }
+    //if the car collides with anything the driver gets shocked and drives backwards for a bit
     void setCarBack()
     {
         if(speed <0 && transform.position.x <= position.x - 1)
@@ -47,12 +49,13 @@ public class CarMovement : MonoBehaviour
             waitTime = time+4;
             
         }
-        //after car stopped make it move again - maybe wait for a second
+        //after car stopped make it move again - wait for 4 seconds until start driving again
         if (speed == 0 && time > waitTime)
         {
             hitSomething = false;
         }
     }
+    /*The cars will pop up at the other side of the screen if they drive out of the gameview*/
     void cycleCar()
     {
         
@@ -71,8 +74,7 @@ public class CarMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        //if the car collides with anything the driver gets shocked and drives backwards for a bit
-        speed = (speed - (speed / 2)) * -1;
+        speed = (speed - (speed / 2)) * -1; //half the speed
         position = transform.position;
         hitSomething = true;
     }
