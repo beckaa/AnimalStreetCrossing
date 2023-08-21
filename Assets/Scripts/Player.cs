@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     float time;
     Rigidbody rb;
     bool walkingOnObject;
+    bool isJumping = false;
     public int getLife()
     {
         return life;
@@ -35,11 +36,12 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        jump();
         //get PlayerInput
-       xInput = Input.GetAxis("Horizontal");
-       zInput = Input.GetAxis("Vertical");
-       movePlayer();
-        
+        xInput = Input.GetAxis("Horizontal");
+        zInput = Input.GetAxis("Vertical");
+        movePlayer();
     }
     private void Update()
     {
@@ -48,7 +50,7 @@ public class Player : MonoBehaviour
             resetPlayer();
         }
         time += Time.deltaTime;
-        if (!walkingOnObject)
+        if (!walkingOnObject && !isJumping)
         {
             rotatePlayerWithTerrain();
             alignPlayerToTerrainHeight();
@@ -81,31 +83,41 @@ public class Player : MonoBehaviour
      */
     void movePlayer()
     {
-        if (xInput == 0 && zInput == 0)
+        if (xInput == 0 && zInput == 0 && !isJumping)
         {
-            //freeze position to prevent the player to slide down hills if not moving
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
-        else
+        else if(xInput ==0 && zInput ==0 && isJumping)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        }else
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation;
-
         }
         animator.SetFloat("forwards", zInput);
         if (xInput >= 1)
         {
             //rotate player in moving direction
-            transform.Rotate(0, Time.deltaTime * 40 * 2, 0);
+            transform.Rotate(0, Time.deltaTime * 40 * 3, 0);
         }
         if (xInput < 0)
         {
             //rotate player in moving direction
-            transform.Rotate(0, Time.deltaTime * -40 * 2, 0);
+            transform.Rotate(0, Time.deltaTime * -40 * 3, 0);
         }
         if (zInput > 0)
         {
             //changes the players position through user input
             transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
+        }
+    }
+   void jump()
+    {
+        if (Input.GetButtonDown("Jump") && !isJumping)
+        {
+            isJumping = true;
+            //movePlayer();
+            rb.AddForce(new Vector3(0,8,0),ForceMode.Impulse);
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -121,10 +133,14 @@ public class Player : MonoBehaviour
         {
             walkingOnObject = true;
         }
+        if(other.gameObject.tag == "ground" || other.gameObject.tag=="bridge")
+        {
+            isJumping = false;
+        }
     }
     private void OnCollisionStay(Collision collision)
     {
-        //makes sure that the tag will remain true [maybe can be deleted]
+        //makes sure that the tag will remain true
         if (collision.gameObject.tag == "bridge")
         {
             walkingOnObject = true;
