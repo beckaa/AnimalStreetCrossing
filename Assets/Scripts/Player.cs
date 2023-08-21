@@ -15,8 +15,9 @@ public class Player : MonoBehaviour
     float time;
     Rigidbody rb;
     bool walkingOnObject;
-    bool isJumping = false;
     float groundHeight;
+    bool doJump;
+    bool isGrounded;
     public int getLife()
     {
         return life;
@@ -32,13 +33,13 @@ public class Player : MonoBehaviour
             movementSpeed = 5f;
         }
         rb = this.GetComponent<Rigidbody>();
-        walkingOnObject = false;  
+        walkingOnObject = false;
+        isGrounded = true;
+        doJump = false;
     }
 
     void FixedUpdate()
     {
-
-        jump();
         //get PlayerInput
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
@@ -51,11 +52,15 @@ public class Player : MonoBehaviour
             resetPlayer();
         }
         time += Time.deltaTime;
-        if (!walkingOnObject && !isJumping)
+        if (!walkingOnObject && !doJump)
         {
             rotatePlayerWithTerrain();
             alignPlayerToTerrainHeight();
-        }  
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            doJump = true;
+        }
     }
 
     /*aligns the players height to the terrain so it will stay grounded*/
@@ -84,11 +89,12 @@ public class Player : MonoBehaviour
      */
     void movePlayer()
     {
-        if (xInput == 0 && zInput == 0 && !isJumping)
+        jump();
+        if (xInput == 0 && zInput == 0 && !doJump)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
-        else if(xInput ==0 && zInput ==0 && isJumping)
+        else if(xInput ==0 && zInput ==0 && doJump)
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }else
@@ -114,10 +120,10 @@ public class Player : MonoBehaviour
     }
    void jump()
     {
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (doJump && isGrounded)
         {
-            isJumping = true;
             rb.AddForce(new Vector3(0,2,0),ForceMode.Impulse);
+            isGrounded = false;
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -133,10 +139,11 @@ public class Player : MonoBehaviour
         {
             walkingOnObject = true;
         }
-        if(other.gameObject.tag == "ground" || other.gameObject.tag=="bridge")
+        if(other.gameObject.name == "Ground" || other.gameObject.tag=="bridge" || other.gameObject.tag=="ground")
         {
-            isJumping = false;
+            doJump = false;
         }
+
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -145,10 +152,17 @@ public class Player : MonoBehaviour
         {
             walkingOnObject = true;
         }
-        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "bridge")
+        if (collision.gameObject.tag=="barrier" || collision.gameObject.tag == "car")
         {
-            isJumping = false;
+            isGrounded = false;
         }
+        else
+        {
+            isGrounded = true;
+        }
+        
+        
+        
     }
 
     /*will play the damage animation and also reduce the players life count*/
