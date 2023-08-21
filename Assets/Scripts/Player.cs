@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     bool walkingOnObject;
     bool isJumping = false;
+    float groundHeight;
     public int getLife()
     {
         return life;
@@ -54,16 +55,16 @@ public class Player : MonoBehaviour
         {
             rotatePlayerWithTerrain();
             alignPlayerToTerrainHeight();
-        }
+        }  
     }
 
     /*aligns the players height to the terrain so it will stay grounded*/
     void alignPlayerToTerrainHeight()
     {
         //get height of terrain at the current player position
-        float height = Terrain.activeTerrain.SampleHeight(transform.position);
+        groundHeight = Terrain.activeTerrain.SampleHeight(transform.position);
         //set player to terrain height + player sprite height
-        transform.position = new Vector3(transform.position.x, height + 5.62f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, groundHeight + 5.62f, transform.position.z);
     }
 
     /*rotates the player with the Terrain so it will not look like the player floats with half the body in the air while walking hills*/
@@ -116,8 +117,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
             isJumping = true;
-            //movePlayer();
-            rb.AddForce(new Vector3(0,8,0),ForceMode.Impulse);
+            rb.AddForce(new Vector3(0,2,0),ForceMode.Impulse);
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -144,6 +144,10 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "bridge")
         {
             walkingOnObject = true;
+        }
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "bridge")
+        {
+            isJumping = false;
         }
     }
 
