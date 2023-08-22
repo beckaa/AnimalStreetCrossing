@@ -24,3 +24,7 @@ https://assetstore.unity.com/packages/3d/characters/animals/wolf-animated-45505
 https://assetstore.unity.com/packages/3d/props/old-coin-49530
 
 https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-texture-153499
+
+## Used Images
+
+https://www.deviantart.com/zora-iish/art/First-snow-507010448
