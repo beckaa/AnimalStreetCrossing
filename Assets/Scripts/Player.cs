@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     float groundHeight;
     bool doJump;
     bool isGrounded;
+    Quaternion startRotation;
     public int getLife()
     {
         return life;
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
         walkingOnObject = false;
         isGrounded = true;
         doJump = false;
+        startRotation = transform.rotation;
     }
 
     void FixedUpdate()
@@ -241,6 +243,7 @@ public class Player : MonoBehaviour
         if (time> waitTime)
         {
             transform.position = new Vector3(0, 16.25f, -22.9f);
+            transform.rotation = startRotation;
             animator.SetBool("damage", false);
             lastCollided = null;
             resetPosition = false;
