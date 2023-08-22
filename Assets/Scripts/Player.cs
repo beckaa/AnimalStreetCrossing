@@ -188,6 +188,10 @@ public class Player : MonoBehaviour
         lastCollided = other.gameObject;
         if (life == 0)
         {
+            if (resetPosition)
+            {
+                resetPlayer();
+            }
             animator.SetBool("Death", true);
             Time.timeScale = 0;
             //game ends -> make end screen
@@ -224,10 +228,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "river" && !walkingOnObject)
         {
+            resetPosition = true;
             detectDamage(other);
             waitTime = time + 2;
             lastCollided = other.gameObject;
-            resetPosition = true;
             resetPlayer();
         }
     }
