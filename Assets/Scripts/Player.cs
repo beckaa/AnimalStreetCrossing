@@ -4,47 +4,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float xInput;
-    float zInput;
     public Animator animator;
     public float movementSpeed;
-    public int life = 3;
-    GameObject lastCollided;
-    float waitTime;
-    bool resetPosition;
-    float time;
-    Rigidbody rb;
-    bool walkingOnObject;
-    float groundHeight;
-    bool doJump;
-    bool isGrounded;
-    Quaternion startRotation;
-    public int getLife()
-    {
-        return life;
-    }
-    public void increaseLife(int number)
-    {
-        life += number;
-    }
+    public int life;
+    //private use only
+    private float xInput;
+    private float zInput;
+    private GameObject lastCollided;
+    private float waitTime;
+    private bool resetPosition;
+    private float time;
+    private Rigidbody rb;
+    private bool walkingOnObject;
+    private bool doJump;
+    private bool isGrounded;
+    private Quaternion startRotation;
+
     void Start()
     {
-        if (movementSpeed == 0)
-        {
-            movementSpeed = 5f;
-        }
-        rb = this.GetComponent<Rigidbody>();
-        walkingOnObject = false;
-        isGrounded = true;
-        doJump = false;
-        startRotation = transform.rotation;
+        initialize();
     }
-
     void FixedUpdate()
     {
-        //get PlayerInput
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
         movePlayer();
     }
     private void Update()
@@ -64,18 +45,37 @@ public class Player : MonoBehaviour
             doJump = true;
         }
     }
+    private void initialize()
+    {
+        //get the rigidbody of the player
+        rb = this.GetComponent<Rigidbody>();
+        //init variables
+        life = 3;
+        walkingOnObject = false;
+        isGrounded = true;
+        doJump = false;
+        startRotation = transform.rotation;
+    }
+    public int getLife()
+    {
+        return life;
+    }
+    public void increaseLife(int number)
+    {
+        life += number;
+    }
 
     /*aligns the players height to the terrain so it will stay grounded*/
-    void alignPlayerToTerrainHeight()
+    private void alignPlayerToTerrainHeight()
     {
         //get height of terrain at the current player position
-        groundHeight = Terrain.activeTerrain.SampleHeight(transform.position);
+         float groundHeight = Terrain.activeTerrain.SampleHeight(transform.position);
         //set player to terrain height + player sprite height
         transform.position = new Vector3(transform.position.x, groundHeight + 5.62f, transform.position.z);
     }
 
     /*rotates the player with the Terrain so it will not look like the player floats with half the body in the air while walking hills*/
-    void rotatePlayerWithTerrain()
+    private void rotatePlayerWithTerrain()
     {
         //rotate the player with the terrain surface
         
@@ -89,20 +89,13 @@ public class Player : MonoBehaviour
     /*moves the player according to horizontal and vertical input
      * movement with w,a,s,d or arrow keys possible
      */
-    void movePlayer()
+    private void movePlayer()
     {
+        //get PlayerInput
+        xInput = Input.GetAxis("Horizontal");
+        zInput = Input.GetAxis("Vertical");
         jump();
-        if (xInput == 0 && zInput == 0 && !doJump)
-        {
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-        else if(xInput ==0 && zInput ==0 && doJump)
-        {
-            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
-        }else
-        {
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
-        }
+        setRigidbodyConstraints();
         animator.SetFloat("forwards", zInput);
         if (xInput >= 1)
         {
@@ -120,7 +113,23 @@ public class Player : MonoBehaviour
             transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
         }
     }
-   void jump()
+    private void setRigidbodyConstraints()
+    {
+        if (xInput == 0 && zInput == 0 && !doJump)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else if (xInput == 0 && zInput == 0 && doJump)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+    }
+    //lets the player jump once if grounded
+    private void jump()
     {
         if (doJump && isGrounded)
         {
@@ -141,6 +150,7 @@ public class Player : MonoBehaviour
         {
             walkingOnObject = true;
         }
+        //if the player hits the ground or the bridge ground the jump ended
         if(other.gameObject.name == "Ground" || other.gameObject.tag=="bridge" || other.gameObject.tag=="ground")
         {
             doJump = false;
@@ -168,7 +178,7 @@ public class Player : MonoBehaviour
     }
 
     /*will play the damage animation and also reduce the players life count*/
-    void detectDamage(Collision other)
+    private void detectDamage(Collision other)
     {
         lastCollided = other.gameObject;
         if (life == 0)
@@ -184,8 +194,8 @@ public class Player : MonoBehaviour
             Debug.Log(life);
         }
     }
-    /*ovrload method as above but used for triggers*/
-    void detectDamage(Collider other)
+    /*ovrload method as above but used for triggers [especially for the water collision]*/
+    private void detectDamage(Collider other)
     {
         lastCollided = other.gameObject;
         if (life == 0)
@@ -217,7 +227,7 @@ public class Player : MonoBehaviour
     }
 
     /*stops the damage taking and animation*/
-    void stopDamage(Collision other)
+    private void stopDamage(Collision other)
     {
         if (other.gameObject.tag == "car")
         {
@@ -238,7 +248,7 @@ public class Player : MonoBehaviour
         }
     }
     /*resets the players position to the start of the game if the player fell into a river*/
-    void resetPlayer()
+    private void resetPlayer()
     {
         if (time> waitTime)
         {
