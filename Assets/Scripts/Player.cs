@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private Quaternion startRotation;
     public AudioSource whimper;
+    public AudioSource walkingSound;
 
     void Start()
     {
@@ -112,6 +113,11 @@ public class Player : MonoBehaviour
         {
             //changes the players position through user input
             transform.Translate(0, 0, zInput * Time.deltaTime * movementSpeed);
+            if (!walkingSound.isPlaying)
+            {
+                walkingSound.PlayOneShot(walkingSound.clip);
+            }
+
         }
     }
     private void setRigidbodyConstraints()
