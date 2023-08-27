@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private bool doJump;
     private bool isGrounded;
     private Quaternion startRotation;
+    public AudioSource whimper;
 
     void Start()
     {
@@ -180,6 +181,7 @@ public class Player : MonoBehaviour
     /*will play the damage animation and also reduce the players life count*/
     private void detectDamage(Collision other)
     {
+        whimper.Play();
         lastCollided = other.gameObject;
         if (life == 0)
         {
@@ -197,6 +199,7 @@ public class Player : MonoBehaviour
     /*ovrload method as above but used for triggers [especially for the water collision]*/
     private void detectDamage(Collider other)
     {
+        whimper.Play();
         lastCollided = other.gameObject;
         if (life == 0)
         {
