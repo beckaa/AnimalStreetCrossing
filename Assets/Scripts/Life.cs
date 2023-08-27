@@ -5,6 +5,7 @@ using UnityEngine;
 public class Life : MonoBehaviour
 {
     public Player player;
+    public AudioSource collect;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -13,6 +14,7 @@ public class Life : MonoBehaviour
             int life = player.getLife();
             if (life < 3)
             {
+                collect.Play();
                 player.increaseLife(1);
                 Destroy(this.gameObject);
             }
