@@ -65,7 +65,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407730055562649222, guid: a919e3467fa8354429fa9e2fb98a9fa5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407730055562649222, guid: a919e3467fa8354429fa9e2fb98a9fa5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407730055562649222, guid: a919e3467fa8354429fa9e2fb98a9fa5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2407730055562649222, guid: a919e3467fa8354429fa9e2fb98a9fa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -122,3 +130,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2407730055562649222, guid: a919e3467fa8354429fa9e2fb98a9fa5, type: 3}
   m_PrefabInstance: {fileID: 3265317483578992349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &880811386178828383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2407730055562649218, guid: a919e3467fa8354429fa9e2fb98a9fa5, type: 3}
+  m_PrefabInstance: {fileID: 3265317483578992349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198225423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880811386178828383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dba7347021ebf4981c2e19d035f213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTag:
+  - Player
+  audioSource: {fileID: 0}

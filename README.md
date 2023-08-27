@@ -29,3 +29,12 @@ https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-t
 ## Used Images
 
 https://www.deviantart.com/zora-iish/art/First-snow-507010448
+
+## Used Sounds
+Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
+Music promoted by https://www.chosic.com/free-music/all/
+Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+ 
+
+Sounds from mixkit https://mixkit.co/free-sound-effects/car/
