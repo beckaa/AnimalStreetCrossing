@@ -1,4 +1,5 @@
-# AnimalStreetCrossing
+# ![logo1 - Kopie](https://github.com/beckaa/AnimalStreetCrossing/assets/44342265/8d403f8b-ba6d-46ce-ad20-c841effc42bb)
+
 This is a 3D unity game which was inspired the classical game frogger.
 # Coding Rule
 Please do not work on main -> main should hold a stable version
