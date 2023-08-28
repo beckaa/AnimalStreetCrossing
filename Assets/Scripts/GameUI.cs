@@ -17,6 +17,11 @@ public class GameUI : MonoBehaviour
     {
         //fill the heart display
         heartController();
+        //if the menu or level scene was loaded start the game
+        //start the game
+        Time.timeScale = 1;
+        //start audio
+        AudioListener.volume = 1;
     }
 
     // Update is called once per frame
