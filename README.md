@@ -36,6 +36,8 @@ https://kenney.nl/assets/food-kit
 
 https://www.deviantart.com/zora-iish/art/First-snow-507010448
 
+https://pixabay.com/vectors/heart-red-emotional-cartoon-29328/
+
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/
