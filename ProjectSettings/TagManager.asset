@@ -9,6 +9,7 @@ TagManager:
   - river
   - bridge
   - ground
+  - finishline
   layers:
   - Default
   - TransparentFX

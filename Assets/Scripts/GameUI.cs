@@ -68,4 +68,14 @@ public class GameUI : MonoBehaviour
         //start audio
         AudioListener.volume = 1;
     }
+    public void restartLevel()
+    {
+        Time.timeScale = 1;
+        AudioListener.volume = 1;
+        player.life = 3;
+        score.resetPoints();
+        player.transform.position = new Vector3(0, 16.25f, -22.9f);
+        player.animator.SetBool("Death", false);
+        player.animator.SetBool("damage", false);
+    }
 }

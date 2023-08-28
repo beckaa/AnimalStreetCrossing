@@ -15,5 +15,10 @@ public class ScoreCalculator : MonoBehaviour
     {
         points += number;
     }
+    public void resetPoints()
+    {
+        points = 0;
+        numberOfCoins = 0;
+    }
 
 }

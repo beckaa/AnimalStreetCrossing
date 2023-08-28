@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public Animator animator;
     public float movementSpeed;
     public int life;
+    public GameObject endscreen;
+    public GameObject winscreen;
+    public TMP_Text scoreText;
+    public ScoreCalculator ScoreCalculator;
     //private use only
     private float xInput;
     private float zInput;
@@ -48,6 +53,7 @@ public class Player : MonoBehaviour
             doJump = true;
         }
         movePlayer();
+        detectDeath();
     }
     private void initialize()
     {
@@ -191,40 +197,16 @@ public class Player : MonoBehaviour
     {
         whimper.Play();
         lastCollided = other.gameObject;
-        if (life == 0)
-        {
-            animator.SetBool("Death", true);
-            Time.timeScale = 0;
-            //game ends -> make end screen
-        }
-        else
-        {
-            animator.SetBool("damage", true);
-            life -= 1;
-            Debug.Log(life);
-        }
+        animator.SetBool("damage", true);
+        life -= 1;
     }
     /*ovrload method as above but used for triggers [especially for the water collision]*/
     private void detectDamage(Collider other)
     {
         whimper.Play();
         lastCollided = other.gameObject;
-        if (life == 0)
-        {
-            if (resetPosition)
-            {
-                resetPlayer();
-            }
-            animator.SetBool("Death", true);
-            Time.timeScale = 0;
-            //game ends -> make end screen
-        }
-        else
-        {
             animator.SetBool("damage", true);
             life -= 1;
-            Debug.Log(life);
-        }
     }
     /* if the player leaves a collider....*/
     private void OnCollisionExit(Collision other)
@@ -257,6 +239,14 @@ public class Player : MonoBehaviour
             lastCollided = other.gameObject;
             resetPlayer();
         }
+        if(other.gameObject.tag == "finishline")
+        {
+            Time.timeScale = 0;
+            AudioListener.volume = 0;
+            scoreText.text = "Your Score: " +ScoreCalculator.getPoints().ToString();
+            winscreen.SetActive(true);
+        }
+        Debug.Log(other.gameObject.tag);
     }
     /*resets the players position to the start of the game if the player fell into a river*/
     private void resetPlayer()
@@ -271,10 +261,23 @@ public class Player : MonoBehaviour
             //detect Death
             if (life == 0)
             {
-                animator.SetBool("Death", true);
-                Time.timeScale = 0;
-                //game ends -> make end screen
+                detectDeath();
             }
         }
+    }
+    private void detectDeath()
+    {
+        if(life == 0)
+        {
+            if (resetPosition)
+            {
+                resetPlayer();
+            }
+            animator.SetBool("Death", true);
+            endscreen.SetActive(true);
+            AudioListener.volume = 0;
+            Time.timeScale = 0;
+        }
+
     }
 }
