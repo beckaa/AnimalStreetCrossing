@@ -11,7 +11,8 @@ public class Coin : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             score.increasePoints(20);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             Debug.Log(score.getPoints());
             score.numberOfCoins++;
             coinSound.Play();

@@ -16,7 +16,8 @@ public class Life : MonoBehaviour
             {
                 collect.Play();
                 player.increaseLife(1);
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
 
         }

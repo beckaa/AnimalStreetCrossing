@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 817375213}
     m_Modifications:
+    - target: {fileID: 72399299129447051, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 72399299129447051, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     - target: {fileID: 204706870219246651, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
       propertyPath: audioSource
       value: 
@@ -190,6 +198,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!114 &49673332 stripped
@@ -1637,6 +1653,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!4 &415633012 stripped
@@ -1711,6 +1735,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!1 &525350808
@@ -3634,6 +3666,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!4 &1146740127 stripped
@@ -4100,6 +4140,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!1 &1388262853
@@ -4320,6 +4368,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!1 &1495999669
@@ -4703,6 +4759,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!4 &1565601077 stripped
@@ -5051,6 +5115,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!1 &1621160894
@@ -5882,6 +5954,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 49673335}
+    - target: {fileID: 7431053869591643359, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
 --- !u!1 &2020094112

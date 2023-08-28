@@ -77,5 +77,16 @@ public class GameUI : MonoBehaviour
         player.transform.position = new Vector3(0, 16.25f, -22.9f);
         player.animator.SetBool("Death", false);
         player.animator.SetBool("damage", false);
+        GameObject coins=GameObject.Find("Coins");
+        for(int i =0; i< coins.gameObject.transform.childCount; i++)
+        {
+            coins.gameObject.transform.GetChild(i).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        GameObject lifes = GameObject.Find("Lifes");
+        for (int i = 0; i < lifes.gameObject.transform.childCount; i++)
+        {
+            lifes.gameObject.transform.GetChild(i).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
     }
 }
