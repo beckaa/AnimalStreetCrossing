@@ -38,6 +38,10 @@ https://www.deviantart.com/zora-iish/art/First-snow-507010448
 
 https://pixabay.com/vectors/heart-red-emotional-cartoon-29328/
 
+
+Image by rawpixel.com on Freepik
+https://www.freepik.com/free-vector/money_2900485.htm#query=coin&position=4&from_view=search&track=sph 
+
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/

@@ -6,6 +6,7 @@ public class ScoreCalculator : MonoBehaviour
 {
     //TODO: also increase by passed time ??
     int points;
+    public int numberOfCoins;
     public int getPoints()
     {
         return points;
