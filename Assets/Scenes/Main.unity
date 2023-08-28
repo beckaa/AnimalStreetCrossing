@@ -3142,6 +3142,10 @@ PrefabInstance:
       propertyPath: coinSound
       value: 
       objectReference: {fileID: 817375214}
+    - target: {fileID: 5085618360276610321, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.283
+      objectReference: {fileID: 0}
     - target: {fileID: 5085618361214146565, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
       propertyPath: m_Name
       value: Coin (8)
