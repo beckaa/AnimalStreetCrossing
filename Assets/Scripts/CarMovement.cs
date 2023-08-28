@@ -10,6 +10,7 @@ public class CarMovement : MonoBehaviour
     private Vector3 position;
     private float time;
     private float waitTime;
+    public AudioSource startCarSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,12 +41,14 @@ public class CarMovement : MonoBehaviour
         {
             //stop car
             speed = 0;
+            startCarSound.Play();
             waitTime = time+4;
             
         }else if(speed>0 && transform.position.x>= position.x +1)
         {
             //stop car
             speed = 0;
+            startCarSound.Play();
             waitTime = time+4;
             
         }

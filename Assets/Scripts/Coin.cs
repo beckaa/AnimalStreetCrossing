@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public ScoreCalculator score;
+    public AudioSource coinSound;
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -12,6 +13,11 @@ public class Coin : MonoBehaviour
             score.increasePoints(20);
             Destroy(this.gameObject);
             Debug.Log(score.getPoints());
+        }
+
+        if(collision.gameObject.tag == "Player")
+        {
+            coinSound.Play();
         }
     }
 }
