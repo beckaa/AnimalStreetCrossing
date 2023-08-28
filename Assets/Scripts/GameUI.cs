@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour
     public Player player;
     public Image heart;
     public TMP_Text coinText;
+    public GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class GameUI : MonoBehaviour
     {
         heartController();
         coinCounter();
+        pause();
     }
 
     void heartController()
@@ -40,5 +42,24 @@ public class GameUI : MonoBehaviour
     void coinCounter()
     {
         coinText.text = score.numberOfCoins.ToString() + " x ";
+    }
+    void pause()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            pauseMenu.SetActive(true);
+            //stop the game
+            Time.timeScale = 0;
+            //stop audio
+            AudioListener.volume = 0;
+        }
+    }
+    public void closeMenu()
+    {
+        pauseMenu.SetActive(false);
+        //start the game
+        Time.timeScale = 1;
+        //start audio
+        AudioListener.volume = 1;
     }
 }
