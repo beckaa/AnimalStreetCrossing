@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        movePlayer();
+        setRigidbodyConstraints();
+        jump();
     }
     private void Update()
     {
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
         {
             doJump = true;
         }
+        movePlayer();
     }
     private void initialize()
     {
@@ -96,8 +98,6 @@ public class Player : MonoBehaviour
         //get PlayerInput
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
-        jump();
-        setRigidbodyConstraints();
         animator.SetFloat("forwards", zInput);
         if (xInput >= 1)
         {
@@ -122,6 +122,8 @@ public class Player : MonoBehaviour
     }
     private void setRigidbodyConstraints()
     {
+        xInput = Input.GetAxis("Horizontal");
+        zInput = Input.GetAxis("Vertical");
         if (xInput == 0 && zInput == 0 && !doJump)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
