@@ -15,7 +15,8 @@ public class GameUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //fill the heart display
+        heartController();
     }
 
     // Update is called once per frame
