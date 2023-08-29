@@ -6,6 +6,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadScene(string name)
     {
+        AudioListener.volume = 1;
         SceneManager.LoadScene(name);
     }
 }
