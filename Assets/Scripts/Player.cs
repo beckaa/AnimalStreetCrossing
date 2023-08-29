@@ -246,7 +246,6 @@ public class Player : MonoBehaviour
             stopGameSounds();
             Time.timeScale = 0;
         }
-        Debug.Log(other.gameObject.tag);
     }
     /*resets the players position to the start of the game if the player fell into a river*/
     private void resetPlayer()
