@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     private bool doJump;
     private bool isGrounded;
     private Quaternion startRotation;
-    public AudioSource whimper;
+    public AudioSource playerAudio;
     public AudioSource walkingSound;
 
     void Start()
@@ -195,7 +195,7 @@ public class Player : MonoBehaviour
     /*will play the damage animation and also reduce the players life count*/
     private void detectDamage(Collision other)
     {
-        whimper.Play();
+        playerAudio.Play();
         lastCollided = other.gameObject;
         animator.SetBool("damage", true);
         life -= 1;
@@ -203,7 +203,7 @@ public class Player : MonoBehaviour
     /*ovrload method as above but used for triggers [especially for the water collision]*/
     private void detectDamage(Collider other)
     {
-        whimper.Play();
+        playerAudio.Play();
         lastCollided = other.gameObject;
             animator.SetBool("damage", true);
             life -= 1;
@@ -241,10 +241,10 @@ public class Player : MonoBehaviour
         }
         if(other.gameObject.tag == "finishline")
         {
-            Time.timeScale = 0;
-            AudioListener.volume = 0;
             scoreText.text = "Your Score: " +ScoreCalculator.getPoints().ToString();
             winscreen.SetActive(true);
+            stopGameSounds();
+            Time.timeScale = 0;
         }
         Debug.Log(other.gameObject.tag);
     }
@@ -274,10 +274,19 @@ public class Player : MonoBehaviour
                 resetPlayer();
             }
             animator.SetBool("Death", true);
+            stopGameSounds();
             endscreen.SetActive(true);
-            AudioListener.volume = 0;
             Time.timeScale = 0;
         }
 
+    }
+    //stops all sounds with the tag inGameSounds
+    void stopGameSounds()
+    {
+        GameObject[] sounds = GameObject.FindGameObjectsWithTag("inGameSounds");
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].GetComponent<AudioSource>().Stop();
+        }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 608764225}
   m_Layer: 7
   m_Name: truckSound
-  m_TagString: Untagged
+  m_TagString: inGameSounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 3856183637054326777}
   m_Layer: 7
   m_Name: driveBy
-  m_TagString: Untagged
+  m_TagString: inGameSounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
