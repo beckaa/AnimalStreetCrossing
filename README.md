@@ -38,9 +38,11 @@ https://www.deviantart.com/zora-iish/art/First-snow-507010448
 
 https://pixabay.com/vectors/heart-red-emotional-cartoon-29328/
 
-
 Image by rawpixel.com on Freepik
 https://www.freepik.com/free-vector/money_2900485.htm#query=coin&position=4&from_view=search&track=sph 
+
+Wood buttons by upklyak
+https://www.freepik.com/free-vector/wooden-web-buttons-round-icons-game-interface_25278491.htm
 
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
