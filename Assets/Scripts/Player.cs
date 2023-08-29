@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     private bool doJump;
     private bool isGrounded;
     private Quaternion startRotation;
-    public AudioSource playerAudio;
+    public AudioSource whimper;
     public AudioSource walkingSound;
 
     void Start()
@@ -65,7 +65,6 @@ public class Player : MonoBehaviour
         isGrounded = true;
         doJump = false;
         startRotation = transform.rotation;
-        AudioListener.volume = 1;
     }
     public int getLife()
     {
@@ -196,7 +195,7 @@ public class Player : MonoBehaviour
     /*will play the damage animation and also reduce the players life count*/
     private void detectDamage(Collision other)
     {
-        playerAudio.Play();
+        whimper.Play();
         lastCollided = other.gameObject;
         animator.SetBool("damage", true);
         life -= 1;
@@ -204,10 +203,10 @@ public class Player : MonoBehaviour
     /*ovrload method as above but used for triggers [especially for the water collision]*/
     private void detectDamage(Collider other)
     {
-        playerAudio.Play();
+        whimper.Play();
         lastCollided = other.gameObject;
-            animator.SetBool("damage", true);
-            life -= 1;
+        animator.SetBool("damage", true);
+        life -= 1;
     }
     /* if the player leaves a collider....*/
     private void OnCollisionExit(Collision other)
@@ -280,6 +279,7 @@ public class Player : MonoBehaviour
         }
 
     }
+    
     //stops all sounds with the tag inGameSounds
     void stopGameSounds()
     {
