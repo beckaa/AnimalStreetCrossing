@@ -48,8 +48,7 @@ Music promoted by https://www.chosic.com/free-music/all/
 Attribution 4.0 International (CC BY 4.0)
 https://creativecommons.org/licenses/by/4.0/
 
- <a href="https://www.freepik.com/free-vector/stone-game-menu-boards-with-vines-lianas-set_29787657.htm#page=2&query=button&position=39&from_view=author">Image by upklyak</a> on Freepik
- <a href="https://www.freepik.com/free-vector/wooden-buttons-user-interface-design-game-video-player-website-vector-cartoon-set-brown_18056387.htm#page=2&query=button&position=6&from_view=author">Image by upklyak</a> on Freepik
+<a href="https://www.freepik.com/free-vector/game-ui-scrolls-wooden-boards-antique-parchments-cartoon-menu-interface-wood-textured-planks-gui-graphic-design-elements-user-panel-with-settings-options-adventure-isolated-2d-vector-set_18482109.htm#page=4&query=button&position=27&from_view=author">Image by upklyak</a> on Freepik
 
 Sounds from mixkit https://mixkit.co/free-sound-effects/car/
 
