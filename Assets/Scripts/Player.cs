@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
         isGrounded = true;
         doJump = false;
         startRotation = transform.rotation;
+        AudioListener.volume = 1;
     }
     public int getLife()
     {

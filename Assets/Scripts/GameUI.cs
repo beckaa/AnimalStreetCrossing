@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -70,23 +71,6 @@ public class GameUI : MonoBehaviour
     }
     public void restartLevel()
     {
-        Time.timeScale = 1;
-        AudioListener.volume = 1;
-        player.life = 3;
-        score.resetPoints();
-        player.transform.position = new Vector3(0, 16.25f, -22.9f);
-        player.animator.SetBool("Death", false);
-        player.animator.SetBool("damage", false);
-        GameObject coins=GameObject.Find("Coins");
-        for(int i =0; i< coins.gameObject.transform.childCount; i++)
-        {
-            coins.gameObject.transform.GetChild(i).gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        }
-        GameObject lifes = GameObject.Find("Lifes");
-        for (int i = 0; i < lifes.gameObject.transform.childCount; i++)
-        {
-            lifes.gameObject.transform.GetChild(i).gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        }
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
