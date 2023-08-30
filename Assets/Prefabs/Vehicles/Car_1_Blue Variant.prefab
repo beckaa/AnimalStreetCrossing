@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4440539156631066511}
   m_Layer: 7
   m_Name: driveBy
-  m_TagString: Untagged
+  m_TagString: inGameSounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 3629805245288856863}
   m_Layer: 7
   m_Name: carHornsound
-  m_TagString: Untagged
+  m_TagString: inGameSounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -357,10 +357,10 @@ RectTransform:
   m_Father: {fileID: 8108843678641251310}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.001953125, y: 480.3}
-  m_SizeDelta: {x: 463.91638, y: 119.4089}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -59.704437}
+  m_SizeDelta: {x: 463.91638, y: 119.408875}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &8108843678641251298
 GameObject:
@@ -483,3 +483,5 @@ MonoBehaviour:
   heart: {fileID: 2415780980881008125, guid: 21c4a16647f7eb440ad21d997f2f96a8, type: 3}
   coinText: {fileID: 8108843677796752540}
   pauseMenu: {fileID: 0}
+  looseScreen: {fileID: 0}
+  winScreen: {fileID: 0}

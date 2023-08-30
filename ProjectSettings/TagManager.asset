@@ -9,6 +9,8 @@ TagManager:
   - river
   - bridge
   - ground
+  - finishline
+  - inGameSounds
   layers:
   - Default
   - TransparentFX

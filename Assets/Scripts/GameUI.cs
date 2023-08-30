@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -12,11 +13,18 @@ public class GameUI : MonoBehaviour
     public Image heart;
     public TMP_Text coinText;
     public GameObject pauseMenu;
+    public GameObject looseScreen;
+    public GameObject winScreen;
     // Start is called before the first frame update
     void Start()
     {
         //fill the heart display
         heartController();
+        //if the menu or level scene was loaded start the game
+        //start the game
+        Time.timeScale = 1;
+        //start audio
+        AudioListener.volume = 1;
     }
 
     // Update is called once per frame
@@ -46,7 +54,7 @@ public class GameUI : MonoBehaviour
     }
     void pause()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && !looseScreen.activeSelf && !winScreen.activeSelf)
         {
             pauseMenu.SetActive(true);
             //stop the game
@@ -62,5 +70,9 @@ public class GameUI : MonoBehaviour
         Time.timeScale = 1;
         //start audio
         AudioListener.volume = 1;
+    }
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

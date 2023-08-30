@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public Animator animator;
     public float movementSpeed;
     public int life;
+    public GameObject endscreen;
+    public GameObject winscreen;
+    public TMP_Text scoreText;
+    public ScoreCalculator ScoreCalculator;
     //private use only
     private float xInput;
     private float zInput;
@@ -21,6 +26,7 @@ public class Player : MonoBehaviour
     private Quaternion startRotation;
     public AudioSource whimper;
     public AudioSource walkingSound;
+    int terrainIndex;
 
     void Start()
     {
@@ -28,7 +34,8 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        movePlayer();
+        setRigidbodyConstraints();
+        jump();
     }
     private void Update()
     {
@@ -46,6 +53,8 @@ public class Player : MonoBehaviour
         {
             doJump = true;
         }
+        movePlayer();
+        detectDeath();
     }
     private void initialize()
     {
@@ -71,11 +80,34 @@ public class Player : MonoBehaviour
     private void alignPlayerToTerrainHeight()
     {
         //get height of terrain at the current player position
+        //terrain if there are terrain neighbors -> needs debugging
+        /*if (getTerrain() > 0)
+        {
+            terrainIndex = getTerrain()-1;
+        }*/
          float groundHeight = Terrain.activeTerrain.SampleHeight(transform.position);
         //set player to terrain height + player sprite height
         transform.position = new Vector3(transform.position.x, groundHeight + 5.62f, transform.position.z);
     }
 
+    //returns the current terrain index the player is on
+    /*int getTerrain()
+    {
+        RaycastHit output;
+        int index = 0;
+        if(Physics.Raycast(transform.position,Vector3.down,out output))
+        {
+            foreach (Terrain t in Terrain.activeTerrains)
+            {
+                index++;
+                if(t.gameObject == output.transform.gameObject)
+                {
+                    break;
+                }
+            }
+        }
+        return index;
+    }*/
     /*rotates the player with the Terrain so it will not look like the player floats with half the body in the air while walking hills*/
     private void rotatePlayerWithTerrain()
     {
@@ -96,8 +128,6 @@ public class Player : MonoBehaviour
         //get PlayerInput
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
-        jump();
-        setRigidbodyConstraints();
         animator.SetFloat("forwards", zInput);
         if (xInput >= 1)
         {
@@ -122,6 +152,8 @@ public class Player : MonoBehaviour
     }
     private void setRigidbodyConstraints()
     {
+        xInput = Input.GetAxis("Horizontal");
+        zInput = Input.GetAxis("Vertical");
         if (xInput == 0 && zInput == 0 && !doJump)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -130,7 +162,10 @@ public class Player : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
-        else
+        else if(xInput < 0 &&zInput==0|| xInput > 0 &&zInput==0)
+        {
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        }else
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
@@ -189,40 +224,16 @@ public class Player : MonoBehaviour
     {
         whimper.Play();
         lastCollided = other.gameObject;
-        if (life == 0)
-        {
-            animator.SetBool("Death", true);
-            Time.timeScale = 0;
-            //game ends -> make end screen
-        }
-        else
-        {
-            animator.SetBool("damage", true);
-            life -= 1;
-            Debug.Log(life);
-        }
+        animator.SetBool("damage", true);
+        life -= 1;
     }
     /*ovrload method as above but used for triggers [especially for the water collision]*/
     private void detectDamage(Collider other)
     {
         whimper.Play();
         lastCollided = other.gameObject;
-        if (life == 0)
-        {
-            if (resetPosition)
-            {
-                resetPlayer();
-            }
-            animator.SetBool("Death", true);
-            Time.timeScale = 0;
-            //game ends -> make end screen
-        }
-        else
-        {
-            animator.SetBool("damage", true);
-            life -= 1;
-            Debug.Log(life);
-        }
+        animator.SetBool("damage", true);
+        life -= 1;
     }
     /* if the player leaves a collider....*/
     private void OnCollisionExit(Collision other)
@@ -255,6 +266,13 @@ public class Player : MonoBehaviour
             lastCollided = other.gameObject;
             resetPlayer();
         }
+        if(other.gameObject.tag == "finishline")
+        {
+            scoreText.text = "Your Score: " +ScoreCalculator.getPoints().ToString();
+            winscreen.SetActive(true);
+            stopGameSounds();
+            Time.timeScale = 0;
+        }
     }
     /*resets the players position to the start of the game if the player fell into a river*/
     private void resetPlayer()
@@ -269,10 +287,33 @@ public class Player : MonoBehaviour
             //detect Death
             if (life == 0)
             {
-                animator.SetBool("Death", true);
-                Time.timeScale = 0;
-                //game ends -> make end screen
+                detectDeath();
             }
+        }
+    }
+    private void detectDeath()
+    {
+        if(life == 0)
+        {
+            if (resetPosition)
+            {
+                resetPlayer();
+            }
+            animator.SetBool("Death", true);
+            stopGameSounds();
+            endscreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+    }
+    
+    //stops all sounds with the tag inGameSounds
+    void stopGameSounds()
+    {
+        GameObject[] sounds = GameObject.FindGameObjectsWithTag("inGameSounds");
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].GetComponent<AudioSource>().Stop();
         }
     }
 }

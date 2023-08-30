@@ -44,6 +44,9 @@ https://www.freepik.com/free-vector/money_2900485.htm#query=coin&position=4&from
 Wood buttons by upklyak
 https://www.freepik.com/free-vector/wooden-web-buttons-round-icons-game-interface_25278491.htm
 
+Image by studiogstock on Freepik
+https://www.freepik.com/free-vector/speech-bubble-pack_5894617.htm#query=speech%20bubble&position=0&from_view=search&track=ais"
+
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/
@@ -52,3 +55,10 @@ https://creativecommons.org/licenses/by/4.0/
  
 
 Sounds from mixkit https://mixkit.co/free-sound-effects/car/
+
+Sound Effect by <a href="https://pixabay.com/de/users/soulprodmusic-30064790/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=140381">Oleg Fedak</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=140381">Pixabay</a><br>
+Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=37075">Pixabay</a><br>
+Sound Effect by <a href="https://pixabay.com/de/users/soundsforyou-4861230/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=114354">Micheal</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=114354">Pixabay</a> Light Rain<br>
+Sound Effect by <a href="https://pixabay.com/de/users/white_records-32584949/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=146388">Maksym Dudchyk</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=146388">Pixabay</a> Birds singing <br>
+Sound Effect by <a href="https://pixabay.com/de/users/soundreality-31074404/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=154180">Jurij</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=154180">Pixabay</a> Interface Button <br>
+Sound Effect by <a href="https://pixabay.com/de/users/cybercutie-22684503/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=112677">cybercutie</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=112677">Pixabay</a> The Last Piano <br>
