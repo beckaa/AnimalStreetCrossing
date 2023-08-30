@@ -8,16 +8,6 @@ public class introSpeech : MonoBehaviour
     // Start is called before the first frame update
     public GameObject panel;
     public TMP_Text text;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
