@@ -11,6 +11,7 @@ TagManager:
   - ground
   - finishline
   - inGameSounds
+  - mainMenu
   layers:
   - Default
   - TransparentFX
