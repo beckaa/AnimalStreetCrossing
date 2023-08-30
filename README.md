@@ -44,6 +44,9 @@ https://www.freepik.com/free-vector/money_2900485.htm#query=coin&position=4&from
 Wood buttons by upklyak
 https://www.freepik.com/free-vector/wooden-web-buttons-round-icons-game-interface_25278491.htm
 
+Image by studiogstock on Freepik
+https://www.freepik.com/free-vector/speech-bubble-pack_5894617.htm#query=speech%20bubble&position=0&from_view=search&track=ais"
+
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/
