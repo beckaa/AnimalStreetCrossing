@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private Quaternion startRotation;
     public AudioSource whimper;
     public AudioSource walkingSound;
+    int terrainIndex;
 
     void Start()
     {
@@ -79,11 +80,34 @@ public class Player : MonoBehaviour
     private void alignPlayerToTerrainHeight()
     {
         //get height of terrain at the current player position
+        //terrain if there are terrain neighbors -> needs debugging
+        /*if (getTerrain() > 0)
+        {
+            terrainIndex = getTerrain()-1;
+        }*/
          float groundHeight = Terrain.activeTerrain.SampleHeight(transform.position);
         //set player to terrain height + player sprite height
         transform.position = new Vector3(transform.position.x, groundHeight + 5.62f, transform.position.z);
     }
 
+    //returns the current terrain index the player is on
+    /*int getTerrain()
+    {
+        RaycastHit output;
+        int index = 0;
+        if(Physics.Raycast(transform.position,Vector3.down,out output))
+        {
+            foreach (Terrain t in Terrain.activeTerrains)
+            {
+                index++;
+                if(t.gameObject == output.transform.gameObject)
+                {
+                    break;
+                }
+            }
+        }
+        return index;
+    }*/
     /*rotates the player with the Terrain so it will not look like the player floats with half the body in the air while walking hills*/
     private void rotatePlayerWithTerrain()
     {
@@ -138,7 +162,10 @@ public class Player : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
-        else
+        else if(xInput < 0 &&zInput==0|| xInput > 0 &&zInput==0)
+        {
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        }else
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }

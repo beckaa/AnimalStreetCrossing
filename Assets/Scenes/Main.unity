@@ -808,11 +808,6 @@ PrefabInstance:
       objectReference: {fileID: 817375214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcc0538d071a44e948c76709b0417c, type: 3}
---- !u!4 &415633012 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7278741496024968733, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
-  m_PrefabInstance: {fileID: 7278741497388025763}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &473118275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1403,6 +1398,7 @@ GameObject:
   - component: {fileID: 840656665}
   - component: {fileID: 840656664}
   - component: {fileID: 840656667}
+  - component: {fileID: 840656668}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1488,7 +1484,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd28355ea2a37046ae4044c09bdf7a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 415633012}
+  player: {fileID: 2035992768}
+--- !u!54 &840656668
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840656663}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &848857352
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,6 +4113,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8582318115880784777, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
   m_PrefabInstance: {fileID: 7278741497388025763}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2035992768 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7278741497346831317, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
+  m_PrefabInstance: {fileID: 7278741497388025763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2039778436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +4942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7181301193617715473, guid: a6e903caf555a994695fc17ed2457228, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.2
+      value: -15.199999
       objectReference: {fileID: 0}
     - target: {fileID: 7181301193617715473, guid: a6e903caf555a994695fc17ed2457228, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5058,10 +5075,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
-    - target: {fileID: 8108843678641251298, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8108843678641251309, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
       propertyPath: score
       value: 
@@ -5074,6 +5087,14 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1621160894}
+    - target: {fileID: 8108843678641251309, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1118738892}
+    - target: {fileID: 8108843678641251309, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
+      propertyPath: looseScreen
+      value: 
+      objectReference: {fileID: 554653160}
     - target: {fileID: 8108843678641251310, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
       propertyPath: m_Pivot.x
       value: 0
