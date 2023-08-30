@@ -5071,41 +5071,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 119.408875
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678214801157, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -59.704437
-      objectReference: {fileID: 0}
     - target: {fileID: 8108843678641251298, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
       propertyPath: m_Name
       value: GameUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108843678641251298, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8108843678641251309, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
       propertyPath: score
@@ -5119,6 +5087,14 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1621160894}
+    - target: {fileID: 8108843678641251309, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1118738892}
+    - target: {fileID: 8108843678641251309, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
+      propertyPath: looseScreen
+      value: 
+      objectReference: {fileID: 554653160}
     - target: {fileID: 8108843678641251310, guid: 6cdbbf46050581547b5e8c27a3e08159, type: 3}
       propertyPath: m_Pivot.x
       value: 0

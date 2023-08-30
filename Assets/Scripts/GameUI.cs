@@ -13,6 +13,8 @@ public class GameUI : MonoBehaviour
     public Image heart;
     public TMP_Text coinText;
     public GameObject pauseMenu;
+    public GameObject looseScreen;
+    public GameObject winScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +54,7 @@ public class GameUI : MonoBehaviour
     }
     void pause()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && !looseScreen.activeSelf && !winScreen.activeSelf)
         {
             pauseMenu.SetActive(true);
             //stop the game
