@@ -162,7 +162,10 @@ public class Player : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
-        else
+        else if(xInput < 0 &&zInput==0|| xInput > 0 &&zInput==0)
+        {
+            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        }else
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
