@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class introSpeech : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject child;
+    public GameObject panel;
+    public TMP_Text text;
     void Start()
     {
         
@@ -20,20 +22,22 @@ public class introSpeech : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            child = gameObject.transform.GetChild(0).gameObject;
-            child.SetActive(true);
+            panel.SetActive(true);
+            text.gameObject.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        child.SetActive(false);
+        panel.SetActive(false);
+        text.gameObject.SetActive(false);
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            child.SetActive(true);
+            panel.SetActive(true);
+            text.gameObject.SetActive(true);
         }
     }
 }
