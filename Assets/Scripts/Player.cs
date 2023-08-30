@@ -91,7 +91,6 @@ public class Player : MonoBehaviour
         int index = 0;
         if(Physics.Raycast(transform.position,Vector3.down,out output))
         {
-            Debug.Log(output.transform.gameObject);
             foreach (Terrain t in Terrain.activeTerrains)
             {
                 index++;
