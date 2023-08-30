@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private Quaternion startRotation;
     public AudioSource whimper;
     public AudioSource walkingSound;
+    int terrainIndex;
 
     void Start()
     {
@@ -79,7 +80,11 @@ public class Player : MonoBehaviour
     private void alignPlayerToTerrainHeight()
     {
         //get height of terrain at the current player position
-         float groundHeight = Terrain.activeTerrains[getTerrain()-1].SampleHeight(transform.position);
+        if (getTerrain() > 0)
+        {
+            terrainIndex = getTerrain()-1;
+        }
+         float groundHeight = Terrain.activeTerrains[terrainIndex].SampleHeight(transform.position);
         //set player to terrain height + player sprite height
         transform.position = new Vector3(transform.position.x, groundHeight + 5.62f, transform.position.z);
     }
