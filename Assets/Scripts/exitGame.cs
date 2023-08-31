@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class exitGame : MonoBehaviour
 {
-    public void QuitGame() => Application.Quit();
+    public void exitGame() => Application.Quit();
 }
