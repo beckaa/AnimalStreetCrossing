@@ -4409,7 +4409,7 @@ GameObject:
   - component: {fileID: 2038561853}
   - component: {fileID: 2038561852}
   m_Layer: 0
-  m_Name: Main
+  m_Name: levelZero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
