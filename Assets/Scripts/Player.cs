@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
+        movePlayer();
         setRigidbodyConstraints();
         jump();
     }
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
         {
             doJump = true;
         }
-        movePlayer();
+        //movePlayer();
         detectDeath();
     }
     private void initialize()
