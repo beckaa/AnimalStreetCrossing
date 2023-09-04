@@ -4484,7 +4484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3094366958633764974, guid: 29a4b715e780c3447b323decba7d9014, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3094366958759252768, guid: 29a4b715e780c3447b323decba7d9014, type: 3}
       propertyPath: m_UiScaleMode
@@ -4504,7 +4504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3094366958759252771, guid: 29a4b715e780c3447b323decba7d9014, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3094366958759252798, guid: 29a4b715e780c3447b323decba7d9014, type: 3}
       propertyPath: m_Pivot.x
@@ -4621,7 +4621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5112665907144649237, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5112665907144649321, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
       propertyPath: m_Pivot.x
