@@ -5,5 +5,5 @@ using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour
 {
-    public void start() => SceneManager.LoadScene("Main");
+    public void start() => SceneManager.LoadScene("levelZero");
 }

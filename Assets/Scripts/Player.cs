@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
+        movePlayer();
         setRigidbodyConstraints();
         jump();
     }
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
         {
             doJump = true;
         }
-        movePlayer();
+        //movePlayer();
         detectDeath();
     }
     private void initialize()
@@ -162,9 +163,9 @@ public class Player : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
-        else if(xInput < 0 &&zInput==0|| xInput > 0 &&zInput==0)
+        else if(xInput < 0 &&zInput==0 && doJump|| xInput > 0 &&zInput==0&&!doJump)
         {
-            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         }else
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation;
