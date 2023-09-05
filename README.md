@@ -47,6 +47,8 @@ https://www.freepik.com/free-vector/wooden-web-buttons-round-icons-game-interfac
 Image by studiogstock on Freepik
 https://www.freepik.com/free-vector/speech-bubble-pack_5894617.htm#query=speech%20bubble&position=0&from_view=search&track=ais"
 
+<a href="https://www.flaticon.com/free-icons/navigation" title="navigation icons">Navigation icons created by Freepik - Flaticon</a>
+
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/
