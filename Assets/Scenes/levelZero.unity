@@ -4090,6 +4090,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5112665906229983788, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810103626}
+    - target: {fileID: 5112665906229983788, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
 --- !u!1 &1933680056 stripped
