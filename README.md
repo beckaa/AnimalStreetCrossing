@@ -1,4 +1,4 @@
-# ![logo1 - Kopie](https://github.com/beckaa/AnimalStreetCrossing/assets/44342265/8d403f8b-ba6d-46ce-ad20-c841effc42bb)
+# ![logo1](https://github.com/beckaa/AnimalStreetCrossing/assets/44342265/c4724f88-1432-4968-ad62-0a2f175df5a4)
 
 This is a 3D unity game which was inspired the classical game frogger. The player (wolf) can be moved with w,a,s,d or the arrow keys. It is possible to jump with space. The goal is to reach the end of one level. Here the player can earn more points if he or she collects the coins. Initially, the wolf has 3 lifes. If the player collides with cars or the water than one life will be reduced.
 

@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
-        else if(xInput < 0 &&zInput==0 && doJump|| xInput > 0 &&zInput==0&&!doJump)
+        else if(xInput < 0 &&zInput==0 && !doJump|| xInput > 0 &&zInput==0&&!doJump)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }else
