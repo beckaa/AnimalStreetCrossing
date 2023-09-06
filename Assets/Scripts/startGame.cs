@@ -5,5 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour
 {
-    public void start() => SceneManager.LoadScene("levelZero");
+    AsyncOperation async;
+    private void Start()
+    {
+        async= SceneManager.LoadSceneAsync("levelZero");
+        async.allowSceneActivation = false;
+    }
+    public void start() => async.allowSceneActivation=true;
 }
