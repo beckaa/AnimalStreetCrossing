@@ -4576,10 +4576,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 5112665907144649237, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5112665907144649321, guid: ed39731af7eac1c4ea4fef5fed6b1508, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4903,6 +4899,10 @@ PrefabInstance:
     - target: {fileID: 6683656358112612534, guid: 3ebd8fabffcb70b45a5821776f467542, type: 3}
       propertyPath: m_Name
       value: LooseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683656358112612534, guid: 3ebd8fabffcb70b45a5821776f467542, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ebd8fabffcb70b45a5821776f467542, type: 3}
