@@ -48,7 +48,10 @@ Image by studiogstock on Freepik
 https://www.freepik.com/free-vector/speech-bubble-pack_5894617.htm#query=speech%20bubble&position=0&from_view=search&track=ais"
 
 Destination icons created by pictranoosa - Flaticon
-https://www.flaticon.com/free-icons/destinatio 
+https://www.flaticon.com/free-icons/destination
+
+Quit icons created by sonnycandra - Flaticon
+https://www.flaticon.com/free-icons/quit
 
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
