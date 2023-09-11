@@ -28,6 +28,8 @@ https://assetstore.unity.com/packages/3d/props/old-coin-49530
 
 https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-texture-153499
 
+https://assetstore.unity.com/packages/3d/vegetation/trees/asian-tree-package-vol-1-225842
+
 ### Used assets from Kenney.nl:
 
 https://kenney.nl/assets/food-kit
