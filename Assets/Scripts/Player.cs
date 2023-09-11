@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     private Quaternion startRotation;
     public AudioSource whimper;
     public AudioSource walkingSound;
-    int terrainIndex;
+    //int terrainIndex;
 
     void Start()
     {
@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        xInput = Input.GetAxis("Horizontal");
+        zInput = Input.GetAxis("Vertical");
         if (resetPosition)
         {
             resetPlayer();
@@ -54,7 +56,6 @@ public class Player : MonoBehaviour
         {
             doJump = true;
         }
-        //movePlayer();
         detectDeath();
     }
     private void initialize()
@@ -126,9 +127,6 @@ public class Player : MonoBehaviour
      */
     private void movePlayer()
     {
-        //get PlayerInput
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
         animator.SetFloat("forwards", zInput);
         if (xInput >= 1)
         {
@@ -153,8 +151,6 @@ public class Player : MonoBehaviour
     }
     private void setRigidbodyConstraints()
     {
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
         if (xInput == 0 && zInput == 0 && !doJump)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -194,7 +190,7 @@ public class Player : MonoBehaviour
             walkingOnObject = true;
         }
         //if the player hits the ground or the bridge ground the jump ended
-        if(other.gameObject.name == "Ground" || other.gameObject.tag=="bridge" || other.gameObject.tag=="ground")
+        if(other.gameObject.tag=="bridge" || other.gameObject.tag=="ground")
         {
             doJump = false;
         }
@@ -214,10 +210,7 @@ public class Player : MonoBehaviour
         else
         {
             isGrounded = true;
-        }
-        
-        
-        
+        }      
     }
 
     /*will play the damage animation and also reduce the players life count*/
