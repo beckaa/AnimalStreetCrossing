@@ -5,7 +5,7 @@ This is a 3D unity game which was inspired the classical game frogger. The playe
 
 
 # Coding Rule
-Please do not work on main -> main should hold a stable version
+Please do not work directly on master -> master should hold a stable version
 
 Create your own new Branch which can later be merged.
 
