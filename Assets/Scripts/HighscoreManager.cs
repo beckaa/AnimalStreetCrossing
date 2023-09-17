@@ -87,10 +87,20 @@ public class HighscoreManager : MonoBehaviour
     {
         //if(File.Exists(Application.persistentDataPath+ "/Resources/levelScore" + levelindex + ".txt"))
         //{
-            //highScoreList score = JsonUtility.FromJson<highScoreList>(File.ReadAllText(Application.persistentDataPath + "/Resources/levelScore" + levelindex + ".txt"));
-            highScoreList score = JsonUtility.FromJson<highScoreList>(PlayerPrefs.GetString("level" + levelindex));
+        //highScoreList score = JsonUtility.FromJson<highScoreList>(File.ReadAllText(Application.persistentDataPath + "/Resources/levelScore" + levelindex + ".txt"));
+        Debug.Log(PlayerPrefs.GetString("level" + levelindex.ToString()));
+        if (PlayerPrefs.HasKey("level" + levelindex.ToString()))
+        {
+            string json = PlayerPrefs.GetString("level" + levelindex.ToString());
+            highScoreList score = JsonUtility.FromJson<highScoreList>(json);
             ranking = score.list;
             fileLoaded = true;
+        }
+        else
+        {
+            fileLoaded = false;
+        }
+        
         //}
         //else
         //{
@@ -200,7 +210,8 @@ public class HighscoreManager : MonoBehaviour
     public void saveLevelHighScore(highScoreentry[] list)
     {
         level = new highScoreList(levelindex, list);
-        PlayerPrefs.SetString("level" + levelindex, JsonUtility.ToJson(level));
+        string json = JsonUtility.ToJson(level);
+        PlayerPrefs.SetString("level" + levelindex.ToString(), json);
         //File.WriteAllText(Application.persistentDataPath + "/Resources/levelScore"+levelindex+".txt", JsonUtility.ToJson(level));
     }
 
