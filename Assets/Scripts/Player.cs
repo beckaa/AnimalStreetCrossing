@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     public int life;
     public GameObject endscreen;
     public GameObject winscreen;
-    public TMP_Text scoreText;
+    public GameObject highScoreScreen;
+    //public TMP_Text scoreText;
     public ScoreCalculator ScoreCalculator;
     //private use only
     private float xInput;
@@ -262,8 +263,9 @@ public class Player : MonoBehaviour
         }
         if(other.gameObject.tag == "finishline")
         {
-            scoreText.text = "Your Score: " +ScoreCalculator.getPoints().ToString();
-            winscreen.SetActive(true);
+            //scoreText.text = "Your Score: " +ScoreCalculator.getPoints().ToString();
+            //winscreen.SetActive(true);
+            highScoreScreen.SetActive(true);
             stopGameSounds();
             Time.timeScale = 0;
         }
