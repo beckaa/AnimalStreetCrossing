@@ -1,4 +1,5 @@
-# ![logo1](https://github.com/beckaa/AnimalStreetCrossing/assets/44342265/c4724f88-1432-4968-ad62-0a2f175df5a4)
+# ![logo1](https://github.com/beckaa/AnimalStreetCrossing/assets/44342265/c4724f88-1432-4968-ad62-0a2f175df5a4) ![image](https://github.com/beckaa/AnimalStreetCrossing/assets/139639918/79f1f0e6-67fc-45dc-8a04-3454f4c6245c)
+
 
 This is a 3D unity game which was inspired the classical game frogger. The player (wolf) can be moved with w,a,s,d or the arrow keys. It is possible to jump with space. The goal is to reach the end of one level. Here the player can earn more points if he or she collects the coins. Initially, the wolf has 3 lifes. If the player collides with cars or the water than one life will be reduced.
 
@@ -48,6 +49,12 @@ https://www.freepik.com/free-vector/wooden-web-buttons-round-icons-game-interfac
 
 Image by studiogstock on Freepik
 https://www.freepik.com/free-vector/speech-bubble-pack_5894617.htm#query=speech%20bubble&position=0&from_view=search&track=ais"
+
+Destination icons created by pictranoosa - Flaticon
+https://www.flaticon.com/free-icons/destination
+
+Quit icons created by sonnycandra - Flaticon
+https://www.flaticon.com/free-icons/quit
 
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
