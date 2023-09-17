@@ -5813,6 +5813,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1164859812340812791, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8108843677840593064}
+    - target: {fileID: 1164859812340812791, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restartLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
 --- !u!1 &1928661268 stripped
@@ -6875,7 +6883,7 @@ PrefabInstance:
     - target: {fileID: 7278741497346831319, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
       propertyPath: endscreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1928661268}
     - target: {fileID: 7278741497346831319, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
       propertyPath: scoreText
       value: 
@@ -6883,7 +6891,7 @@ PrefabInstance:
     - target: {fileID: 7278741497346831319, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
       propertyPath: winscreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1664202391}
     - target: {fileID: 7278741497346831319, guid: 149de71d78661f34aaca18a51dcd0a7f, type: 3}
       propertyPath: looseSound
       value: 
