@@ -3999,7 +3999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 259021957503768699, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
       propertyPath: m_Name
-      value: PauseMenuNEW
+      value: PauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 259021957503768699, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
       propertyPath: m_IsActive
@@ -4943,7 +4943,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1883520052272927145, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
       propertyPath: m_Name
-      value: WinScreenNEW
+      value: WinScreen
       objectReference: {fileID: 0}
     - target: {fileID: 1883520052272927156, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
       propertyPath: m_Pivot.x
@@ -5723,7 +5723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1164859811473632216, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
       propertyPath: m_Name
-      value: LooseScreenNEW
+      value: LooseScreen
       objectReference: {fileID: 0}
     - target: {fileID: 1164859811473632216, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
       propertyPath: m_IsActive
