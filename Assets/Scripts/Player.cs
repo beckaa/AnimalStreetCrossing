@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         initialize();
-        PlayerPrefs.DeleteAll();
     }
     void FixedUpdate()
     {
