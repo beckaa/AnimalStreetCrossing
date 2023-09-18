@@ -75,6 +75,7 @@ public class HighscoreManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         levelindex = SceneManager.GetActiveScene().buildIndex-2;
         loadLevelHighscore();
     }
@@ -190,7 +191,7 @@ public class HighscoreManager : MonoBehaviour
             for (int i =rankIndex+1; i< ranking.Length; i++)
             {
                 highScoreentry clone = ranking[i - 1].Clone();
-                clone.rank = i.ToString();
+                clone.rank = (int.Parse(clone.rank)+1).ToString();
                 newList[i] = clone;
            }
             saveLevelHighScore(newList);
