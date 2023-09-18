@@ -75,7 +75,6 @@ public class HighscoreManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         levelindex = SceneManager.GetActiveScene().buildIndex-2;
         loadLevelHighscore();
     }
