@@ -24,7 +24,7 @@ public class GameUI : MonoBehaviour
         //start the game
         Time.timeScale = 1;
         //start audio
-        AudioListener.volume = 1;
+        //AudioListener.volume = 1;
     }
 
     // Update is called once per frame
@@ -60,7 +60,8 @@ public class GameUI : MonoBehaviour
             //stop the game
             Time.timeScale = 0;
             //stop audio
-            AudioListener.volume = 0;
+            //AudioListener.volume = 0;
+            player.stopGameSounds();
         }
     }
     public void closeMenu()
@@ -69,7 +70,8 @@ public class GameUI : MonoBehaviour
         //start the game
         Time.timeScale = 1;
         //start audio
-        AudioListener.volume = 1;
+        player.startGameSounds();
+        //AudioListener.volume = 1;
     }
     public void restartLevel()
     {
