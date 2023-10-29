@@ -58,6 +58,8 @@ https://www.flaticon.com/free-icons/quit
 
 https://pixabay.com/de/vectors/schleife-rot-dekor-f%C3%BCr-das-netz-2410588/
 
+https://pixabay.com/de/vectors/stern-gelb-weihnachtsstern-158502/
+
 ## Used Sounds
 Forest Walk by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/
