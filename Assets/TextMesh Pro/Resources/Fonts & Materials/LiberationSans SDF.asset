@@ -11,7 +11,6 @@ Material:
   m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
   m_ValidKeywords:
   - OUTLINE_ON
-  - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -30,16 +29,16 @@ Material:
     m_Floats:
     - _ColorMask: 15
     - _CullMode: 0
-    - _FaceDilate: 0.24
+    - _FaceDilate: 0.77
     - _GradientScale: 10
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _OutlineSoftness: 0
-    - _OutlineWidth: 0.338
+    - _OutlineWidth: 0.548
     - _PerspectiveFilter: 0.875
-    - _ScaleRatioA: 0.9
+    - _ScaleRatioA: 0.59780806
     - _ScaleRatioB: 1
-    - _ScaleRatioC: 0.257625
+    - _ScaleRatioC: 0.0127499895
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -54,16 +53,16 @@ Material:
     - _UnderlayDilate: 1
     - _UnderlayOffsetX: 1
     - _UnderlayOffsetY: -1
-    - _UnderlaySoftness: 0
+    - _UnderlaySoftness: 1
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
     - _WeightNormal: 0
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0.0627451, g: 0.03137255, b: 0.03137255, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+    - _FaceColor: {r: 0.9339623, g: 0.72690463, b: 0.72690463, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &11400000
 MonoBehaviour:
