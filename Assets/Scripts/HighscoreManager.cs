@@ -63,6 +63,7 @@ public class HighscoreManager : MonoBehaviour
     public TMP_InputField inputName;
     string playername;
     public GameObject popup;
+    public GameObject panelHighscore;
     public ScoreCalculator calculator;
     GameObject[] items = new GameObject[10];
     int index = -1;
@@ -156,6 +157,7 @@ public class HighscoreManager : MonoBehaviour
             {
                 if (currentScore > int.Parse(ranking[i].score))
                 {
+                    panelHighscore.SetActive(false);
                     popup.SetActive(true);
                     index = i;
                     break;
@@ -195,6 +197,7 @@ public class HighscoreManager : MonoBehaviour
            }
             saveLevelHighScore(newList);
             updateUI(newList);
+            panelHighscore.SetActive(true);
         }
     }
     void updateUI(highScoreentry[] list)
