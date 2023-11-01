@@ -63,6 +63,7 @@ public class HighscoreManager : MonoBehaviour
     public TMP_InputField inputName;
     string playername;
     public GameObject popup;
+    public GameObject panelHighscore;
     public ScoreCalculator calculator;
     GameObject[] items = new GameObject[10];
     int index = -1;
@@ -118,7 +119,7 @@ public class HighscoreManager : MonoBehaviour
         {
             for (int i = 0; i < ranking.Length; i++)
             {
-                Vector3 position = new Vector3(parentPlane.transform.position.x, parentPlane.transform.position.y - 20 * i, 0);
+                Vector3 position = new Vector3(parentPlane.transform.position.x, parentPlane.transform.position.y - 35 - 20 * i, 0);
                 GameObject item = Instantiate(listItem, position, Quaternion.identity, listItem.transform.parent);
                 item.transform.GetChild(0).GetComponent<TMP_Text>().text = ranking[i].rank;
                 item.transform.GetChild(1).GetComponent<TMP_Text>().text = ranking[i].getplayername();
@@ -132,7 +133,7 @@ public class HighscoreManager : MonoBehaviour
             //create new ranking for level if it does not exist
             for (int i = 0; i < 10; i++)
             {
-                Vector3 position = new Vector3(parentPlane.transform.position.x, parentPlane.transform.position.y - 20 * i, 0);
+                Vector3 position = new Vector3(parentPlane.transform.position.x, parentPlane.transform.position.y - 35 - 20 * i, 0);
                 GameObject item = Instantiate(listItem, position, Quaternion.identity, listItem.transform.parent);
                 string rank = (i + 1).ToString();
                 highScoreentry newEntry = new highScoreentry(rank,"Your Name","0");
@@ -156,6 +157,7 @@ public class HighscoreManager : MonoBehaviour
             {
                 if (currentScore > int.Parse(ranking[i].score))
                 {
+                    panelHighscore.SetActive(false);
                     popup.SetActive(true);
                     index = i;
                     break;
@@ -195,6 +197,7 @@ public class HighscoreManager : MonoBehaviour
            }
             saveLevelHighScore(newList);
             updateUI(newList);
+            panelHighscore.SetActive(true);
         }
     }
     void updateUI(highScoreentry[] list)

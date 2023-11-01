@@ -303,13 +303,22 @@ public class Player : MonoBehaviour
 
     }
     
-    //stops all sounds with the tag inGameSounds
-    void stopGameSounds()
+    //pauses all sounds with the tag inGameSounds
+    public void stopGameSounds()
     {
         GameObject[] sounds = GameObject.FindGameObjectsWithTag("inGameSounds");
         for (int i = 0; i < sounds.Length; i++)
         {
-            sounds[i].GetComponent<AudioSource>().Stop();
+            sounds[i].GetComponent<AudioSource>().Pause();
+        }
+    }
+    //unpauses all sounds with the tag inGameSounds
+    public void startGameSounds()
+    {
+        GameObject[] sounds = GameObject.FindGameObjectsWithTag("inGameSounds");
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].GetComponent<AudioSource>().UnPause();
         }
     }
 }

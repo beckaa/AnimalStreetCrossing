@@ -23,8 +23,6 @@ public class GameUI : MonoBehaviour
         //if the menu or level scene was loaded start the game
         //start the game
         Time.timeScale = 1;
-        //start audio
-        AudioListener.volume = 1;
     }
 
     // Update is called once per frame
@@ -57,19 +55,19 @@ public class GameUI : MonoBehaviour
         if (Input.GetButtonDown("Cancel") && !looseScreen.activeSelf && !winScreen.activeSelf)
         {
             pauseMenu.SetActive(true);
-            //stop the game
+            //stop the game (movements, etc.)
             Time.timeScale = 0;
-            //stop audio
-            AudioListener.volume = 0;
+            //pauses in-game audio
+            player.stopGameSounds();
         }
     }
     public void closeMenu()
     {
         pauseMenu.SetActive(false);
-        //start the game
+        //start the game (movements, etc.)
         Time.timeScale = 1;
-        //start audio
-        AudioListener.volume = 1;
+        //unpauses in-game audio
+        player.startGameSounds();
     }
     public void restartLevel()
     {
