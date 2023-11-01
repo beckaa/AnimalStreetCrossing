@@ -303,7 +303,7 @@ public class Player : MonoBehaviour
 
     }
     
-    //stops all sounds with the tag inGameSounds
+    //pauses all sounds with the tag inGameSounds
     public void stopGameSounds()
     {
         GameObject[] sounds = GameObject.FindGameObjectsWithTag("inGameSounds");
@@ -312,6 +312,7 @@ public class Player : MonoBehaviour
             sounds[i].GetComponent<AudioSource>().Pause();
         }
     }
+    //unpauses all sounds with the tag inGameSounds
     public void startGameSounds()
     {
         GameObject[] sounds = GameObject.FindGameObjectsWithTag("inGameSounds");
