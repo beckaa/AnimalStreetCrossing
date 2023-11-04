@@ -175,6 +175,11 @@ public class HighscoreManager : MonoBehaviour
     public void savePlayerName()
     {
         playername = askPlayerName();
+        if (String.IsNullOrEmpty(playername)) 
+        {
+            panelHighscore.SetActive(true);
+            popup.SetActive(false);
+        }
     }
 
     void saveNewScore()
