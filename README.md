@@ -31,6 +31,8 @@ https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-t
 
 https://assetstore.unity.com/packages/3d/vegetation/trees/asian-tree-package-vol-1-225842
 
+https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
+
 ### Used assets from Kenney.nl:
 
 https://kenney.nl/assets/food-kit
