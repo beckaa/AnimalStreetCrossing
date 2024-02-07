@@ -484,9 +484,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1883520052272927144}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 464101304423920723}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: load
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 1883520052272927157}
   - component: {fileID: 1883520052272927146}
   - component: {fileID: 1883520052272927147}
-  - component: {fileID: 1883520052272927144}
+  - component: {fileID: 464101304423920723}
   - component: {fileID: 1883520052272927159}
   m_Layer: 5
   m_Name: WinScreen
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1883520052272927144
+--- !u!114 &464101304423920723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1883520052272927145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2dbb9a10d9bcd545ab42ad59dd2e379, type: 3}
+  m_Script: {fileID: 11500000, guid: fd6a30df1347e7241804e0e8827a13e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1883520052272927159

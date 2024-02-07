@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 1164859811473632220}
   - component: {fileID: 1164859811473632219}
   - component: {fileID: 1164859811473632218}
-  - component: {fileID: 1164859811473632217}
+  - component: {fileID: 5284835744724608689}
   - component: {fileID: 1164859811473632222}
   m_Layer: 5
   m_Name: LooseScreen
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1164859811473632217
+--- !u!114 &5284835744724608689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164859811473632216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2dbb9a10d9bcd545ab42ad59dd2e379, type: 3}
+  m_Script: {fileID: 11500000, guid: fd6a30df1347e7241804e0e8827a13e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1164859811473632222
@@ -1007,9 +1007,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164859811473632217}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 5284835744724608689}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: load
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

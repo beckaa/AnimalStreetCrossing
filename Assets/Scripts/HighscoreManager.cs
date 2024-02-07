@@ -12,15 +12,6 @@ public class highScoreentry
     public string playername;
     public string score;
 
-    public highScoreentry()
-    {
-
-    }
-    public highScoreentry(string playername, string score)
-    {
-        this.playername = playername;
-        this.score = score;
-    }
     public highScoreentry(string rank,string playername, string score)
     {
         this.rank = rank;
@@ -86,10 +77,7 @@ public class HighscoreManager : MonoBehaviour
     }
     private void loadFile()
     {
-        //if(File.Exists(Application.persistentDataPath+ "/Resources/levelScore" + levelindex + ".txt"))
-        //{
-        //highScoreList score = JsonUtility.FromJson<highScoreList>(File.ReadAllText(Application.persistentDataPath + "/Resources/levelScore" + levelindex + ".txt"));
-        if (PlayerPrefs.HasKey("level" + levelindex.ToString()))
+       if (PlayerPrefs.HasKey("level" + levelindex.ToString()))
         {
             string json = PlayerPrefs.GetString("level" + levelindex.ToString());
             highScoreList score = JsonUtility.FromJson<highScoreList>(json);
@@ -100,12 +88,6 @@ public class HighscoreManager : MonoBehaviour
         {
             fileLoaded = false;
         }
-        
-        //}
-        //else
-        //{
-          //  fileLoaded = false;
-        //}
     }
     public void loadLevelHighscore()
     {
@@ -219,7 +201,6 @@ public class HighscoreManager : MonoBehaviour
         level = new highScoreList(levelindex, list);
         string json = JsonUtility.ToJson(level);
         PlayerPrefs.SetString("level" + levelindex.ToString(), json);
-        //File.WriteAllText(Application.persistentDataPath + "/Resources/levelScore"+levelindex+".txt", JsonUtility.ToJson(level));
     }
 
 }

@@ -83,34 +83,12 @@ public class Player : MonoBehaviour
     private void alignPlayerToTerrainHeight()
     {
         //get height of terrain at the current player position
-        //terrain if there are terrain neighbors -> needs debugging
-        /*if (getTerrain() > 0)
-        {
-            terrainIndex = getTerrain()-1;
-        }*/
          float groundHeight = Terrain.activeTerrain.SampleHeight(transform.position);
         //set player to terrain height + player sprite height
         transform.position = new Vector3(transform.position.x, groundHeight + 5.62f, transform.position.z);
     }
 
-    //returns the current terrain index the player is on
-    /*int getTerrain()
-    {
-        RaycastHit output;
-        int index = 0;
-        if(Physics.Raycast(transform.position,Vector3.down,out output))
-        {
-            foreach (Terrain t in Terrain.activeTerrains)
-            {
-                index++;
-                if(t.gameObject == output.transform.gameObject)
-                {
-                    break;
-                }
-            }
-        }
-        return index;
-    }*/
+   
     /*rotates the player with the Terrain so it will not look like the player floats with half the body in the air while walking hills*/
     private void rotatePlayerWithTerrain()
     {

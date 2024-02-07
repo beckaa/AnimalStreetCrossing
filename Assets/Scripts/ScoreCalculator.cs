@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreCalculator : MonoBehaviour
 {
-    //TODO: also increase by passed time ??
+    //TODO: increase score if the player reaches the finishline and has time left (set a timer) ??
     int points;
     public int numberOfCoins;
     public int getPoints()
