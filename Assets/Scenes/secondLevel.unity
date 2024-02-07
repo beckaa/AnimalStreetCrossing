@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.2781239, g: 0.332909, b: 0.4716981, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2894d159e7f6de044900e04027d6baae, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14187217, g: 0.35143816, b: 0.5591504, a: 1}
+  m_Sun: {fileID: 1321056362}
+  m_IndirectSpecularColor: {r: 0.03622531, g: 0.04514489, b: 0.12886877, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: f0ceeebc0c6f2ff4d922bb95cc4860d8, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 737ccebc24505504ab4961bf6347b24e, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5174,7 +5174,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.94528717, g: 0.9528302, b: 0.7775454, a: 1}
+  m_Color: {r: 0.93501306, g: 0.9433962, b: 0.7698469, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -5184,7 +5184,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.871
+    m_Strength: 0.862
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -5232,14 +5232,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321056361}
-  m_LocalRotation: {x: -0.37601575, y: -0.27612054, z: -0.6200476, w: -0.6308015}
+  m_LocalRotation: {x: -0.6674682, y: -0.67051506, z: -0.06800333, w: -0.31665653}
   m_LocalPosition: {x: -32.1, y: 35.3, z: 3.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 172.41699, y: 235.269, z: -87.01099}
+  m_LocalEulerAnglesHint: {x: 160.639, y: 326.885, z: -96.06799}
 --- !u!1 &1326055762
 GameObject:
   m_ObjectHideFlags: 0
