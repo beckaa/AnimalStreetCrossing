@@ -10178,10 +10178,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 259021957503768699, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 259021958619072578, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10190,37 +10186,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1680016423}
-    - target: {fileID: 259021958619072578, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: closeMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 259021958619072578, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431636986934973704, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1292146865}
-    - target: {fileID: 2431636986934973704, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431636986934973704, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 2431636986934973704, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
---- !u!82 &1292146865 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4582481992104336218, guid: f21064c2c1619b247a94ee65eb048f87, type: 3}
-  m_PrefabInstance: {fileID: 1292146864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1313964224
 PrefabInstance:
   m_ObjectHideFlags: 0
