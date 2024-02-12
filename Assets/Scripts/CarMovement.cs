@@ -78,13 +78,19 @@ public class CarMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (!player.resetPosition)
+        if (other.gameObject.tag.Equals("car"))
         {
             speed = (speed - (speed / 2)) * -1; //half the speed
-            player.decreaseLife(1);
+            position = transform.position;
+            hitSomething = true;
+        }
+        if(other.gameObject.tag.Equals("Player") && !player.resetPosition)
+        {
+            speed = (speed - (speed / 2)) * -1; //half the speed
             position = transform.position;
             hitSomething = true;
             player.resetPosition = true;
+            player.detectDamage(other);
         }
     }
 }

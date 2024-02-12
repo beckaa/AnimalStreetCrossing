@@ -2399,6 +2399,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c7de3ea78afce6468d2ebe76dd0bf6d, type: 3}
   m_PrefabInstance: {fileID: 491041486}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &528314600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5799253095936638489, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+  m_PrefabInstance: {fileID: 1540720594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &541301973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2170443456366911588, guid: c47e9e1f8ae5c9842a1f8278f5e6fcef, type: 3}
@@ -3726,6 +3731,10 @@ PrefabInstance:
       propertyPath: startCarSound
       value: 
       objectReference: {fileID: 469527128}
+    - target: {fileID: 951598391, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5799253095936638489, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_Name
       value: Truck_2_Blue Variant
@@ -3736,7 +3745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5799253095936928797, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.844771
+      value: 6.22
       objectReference: {fileID: 0}
     - target: {fileID: 5799253095936928797, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3774,7 +3783,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 951598391, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
 --- !u!4 &855028319 stripped
 Transform:
@@ -9908,7 +9918,6 @@ GameObject:
   - component: {fileID: 1258843797}
   - component: {fileID: 1258843796}
   - component: {fileID: 1258843795}
-  - component: {fileID: 1258843794}
   - component: {fileID: 1258843798}
   m_Layer: 0
   m_Name: water
@@ -9917,20 +9926,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1258843794
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258843793}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1258843795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10005,11 +10000,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258843793}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 27.997204, y: 52.577236, z: 19.375456}
-  m_Center: {x: 8.998604, y: -28.701212, z: -1.3171414}
+  m_Size: {x: 9.999999, y: 9.93, z: 12.02}
+  m_Center: {x: 0.00000011920929, y: -8.22, z: 0.15}
 --- !u!1001 &1261450660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10072,6 +10067,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2165873328365870271, guid: b9777067c15b5c64a9afcbcaddda6b92, type: 3}
   m_PrefabInstance: {fileID: 1261450660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1265019683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5799253095936638489, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+  m_PrefabInstance: {fileID: 855028318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1265019690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265019683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0803933, y: 0.030644886, z: 0.02936099}
+  m_Center: {x: 0.0026170667, y: -0.00023398036, z: -0.000000029802322}
 --- !u!1001 &1268068045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16542,6 +16555,10 @@ PrefabInstance:
       propertyPath: startCarSound
       value: 
       objectReference: {fileID: 469527128}
+    - target: {fileID: 951598391, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5799253095936638489, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_Name
       value: Truck_2_Blue Variant (1)
@@ -16590,13 +16607,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 951598391, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
 --- !u!4 &1540720595 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5799253095936928797, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
   m_PrefabInstance: {fileID: 1540720594}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1540720602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528314600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0803933, y: 0.030644886, z: 0.02936099}
+  m_Center: {x: 0.002617089, y: -0.00023398036, z: -0.000000029802322}
 --- !u!4 &1635994573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1796978087558652753, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
@@ -18966,7 +18997,6 @@ MonoBehaviour:
   life: 3
   resetPosition: 0
   endscreen: {fileID: 609279066}
-  winscreen: {fileID: 948983157}
   highScoreScreen: {fileID: 1072312343}
   scoreText: {fileID: 380315837}
   scoreCalculator: {fileID: 684188635}
@@ -19003,7 +19033,6 @@ GameObject:
   - component: {fileID: 786897308598582958}
   - component: {fileID: 786897308598582957}
   - component: {fileID: 786897308598582956}
-  - component: {fileID: 786897308598582959}
   - component: {fileID: 786897308598582952}
   - component: {fileID: 786897308598582953}
   m_Layer: 0
@@ -19107,18 +19136,6 @@ Transform:
   m_Father: {fileID: 786897308899250674}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
---- !u!114 &786897308598582959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786897308598582947}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd28355ea2a37046ae4044c09bdf7a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &786897308891510782
 Animator:
   serializedVersion: 5

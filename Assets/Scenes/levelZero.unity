@@ -4374,6 +4374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1883520052294481476, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1883520053101835984, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -5819,6 +5823,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1664202391}
+    - target: {fileID: 1503313921750960462, guid: 7eb3e8e386e53bd4d8fd06f26be684d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1793788808}
+    - target: {fileID: 1503313921750960462, guid: 7eb3e8e386e53bd4d8fd06f26be684d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503313922214025765, guid: 7eb3e8e386e53bd4d8fd06f26be684d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1793788808}
+    - target: {fileID: 1503313922214025765, guid: 7eb3e8e386e53bd4d8fd06f26be684d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 1503313922780352921, guid: 7eb3e8e386e53bd4d8fd06f26be684d3, type: 3}
       propertyPath: m_Name
       value: highScoreScreen
@@ -6376,6 +6396,14 @@ PrefabInstance:
       propertyPath: startCarSound
       value: 
       objectReference: {fileID: 391247037}
+    - target: {fileID: 980613757, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980613760, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1796978087558652753, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
       propertyPath: m_RootOrder
       value: 0

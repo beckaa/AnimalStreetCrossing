@@ -158,7 +158,13 @@ public class Player2 : MonoBehaviour
         animator.SetBool("damage", true);
         life -= 1;
     }
-   
+    public void detectDamage(Collision other)
+    {
+        whimper.Play();
+        lastCollided = other.gameObject;
+        animator.SetBool("damage", true);
+        life -= 1;
+    }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -171,12 +177,12 @@ public class Player2 : MonoBehaviour
             
         }
 
-        if (hit.gameObject.tag == "car" && !resetPosition)
+       /* if (hit.gameObject.tag == "car" && !resetPosition)
         {
             detectDamage(hit);
             resetPosition = true;
             controller.enabled = false;
-        }
+        }*/
         if (hit.gameObject.tag == "finishline")
         {
             scoreText.text = "Your Score: " + scoreCalculator.getPoints().ToString();
@@ -201,6 +207,7 @@ public class Player2 : MonoBehaviour
             }  
         }
     }
+    
 
     //pauses all sounds with the tag inGameSounds
     public void stopGameSounds()
