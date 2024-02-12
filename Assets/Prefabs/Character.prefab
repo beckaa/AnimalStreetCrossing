@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 786897307138362125}
   - component: {fileID: 786897307138362126}
   - component: {fileID: 786897307138362127}
-  - component: {fileID: 786897307138362124}
   - component: {fileID: 786897307138362123}
   - component: {fileID: 786897307138362122}
   m_Layer: 0
@@ -87,19 +86,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786897307138362112}
   m_Enabled: 1
---- !u!114 &786897307138362124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786897307138362112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd28355ea2a37046ae4044c09bdf7a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!54 &786897307138362123
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -457,7 +443,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3
+  m_Height: 2.25
   m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3

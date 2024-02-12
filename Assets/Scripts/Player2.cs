@@ -50,7 +50,7 @@ public class Player2 : MonoBehaviour
         {
             Invoke("resetPlayer", 1.5f);
         }
-        jump();
+        //jump();
         forward();
         rotatePlayerWithTerrain();
     }
@@ -69,12 +69,13 @@ public class Player2 : MonoBehaviour
             // move if w or upwards arrow is pressed
             moveForward = Input.GetAxis("Vertical") * speed;
         }
+        jump();
         move = this.transform.forward * moveForward;
         move.y = jumping;
         Vector3 rotate = new Vector3(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
-        this.transform.Rotate(rotate);
         if (Time.timeScale > 0) //prevent character from moving if game was paused
         {
+            this.transform.Rotate(rotate);
             controller.Move(move);
         }
         
@@ -112,13 +113,16 @@ public class Player2 : MonoBehaviour
     private void rotatePlayerWithTerrain()
     {
         //rotate the player with the terrain surface
-
-        RaycastHit output;
-        if (Physics.Raycast(transform.position, Vector3.down, out output))
+        if (Time.timeScale > 0)
         {
-            var newRotation = Quaternion.LookRotation(Vector3.Cross(transform.right, output.normal));
-            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, 2 * Time.deltaTime);
+            RaycastHit output;
+            if (Physics.Raycast(transform.position, Vector3.down, out output))
+            {
+                var newRotation = Quaternion.LookRotation(Vector3.Cross(transform.right, output.normal));
+                transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, 2 * Time.deltaTime);
+            }
         }
+        
     }
     /*resets the players position to the start of the game if the player fell into a river*/
     public void resetPlayer()
@@ -133,15 +137,12 @@ public class Player2 : MonoBehaviour
             {
                 detectDeath();
             }
+        controller.enabled = true;
     }
     private void detectDeath()
     {
         if (life == 0)
         {
-            if (resetPosition)
-            {
-                resetPlayer();
-            }
             animator.SetBool("Death", true);
             stopGameSounds();
             endscreen.SetActive(true);
@@ -166,6 +167,7 @@ public class Player2 : MonoBehaviour
         {
             resetPosition = true;
             detectDamage(hit);
+            controller.enabled = false;
             lastCollided = hit.gameObject;
             
         }
@@ -174,6 +176,7 @@ public class Player2 : MonoBehaviour
         {
             detectDamage(hit);
             resetPosition = true;
+            controller.enabled = false;
         }
         if (hit.gameObject.tag == "finishline")
         {
