@@ -5666,7 +5666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
       propertyPath: speed
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
       propertyPath: collect
@@ -5690,7 +5690,7 @@ PrefabInstance:
       objectReference: {fileID: 1664202391}
     - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
       propertyPath: rotationSpeed
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
       propertyPath: highScoreScreen

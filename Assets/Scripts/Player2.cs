@@ -22,7 +22,6 @@ public class Player2 : MonoBehaviour
 
     //UI screens
     public GameObject endscreen;
-    public GameObject winscreen;
     public GameObject highScoreScreen;
     public TMP_Text scoreText;
 
@@ -56,7 +55,7 @@ public class Player2 : MonoBehaviour
     }
     void forward()
     {
-        animator.SetFloat("forwards", move.z);
+        animator.SetFloat("forwards", Input.GetAxis("Vertical"));
         float moveForward=0;
         //prevent walking backwards
         if (Input.GetAxis("Vertical") <= 0)
@@ -181,7 +180,6 @@ public class Player2 : MonoBehaviour
         if (hit.gameObject.tag == "finishline")
         {
             scoreText.text = "Your Score: " + scoreCalculator.getPoints().ToString();
-            //winscreen.SetActive(true);
             highScoreScreen.SetActive(true);
             stopGameSounds();
             Time.timeScale = 0;
