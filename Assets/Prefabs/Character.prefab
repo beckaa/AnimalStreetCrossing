@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 786897307501828310}
   - component: {fileID: 786897307501828306}
   - component: {fileID: 786897307501828311}
+  - component: {fileID: 1390049969}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -394,7 +395,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786897307909505787}
-  m_LocalRotation: {x: -0, y: 0.08542501, z: -0, w: 0.9963446}
+  m_LocalRotation: {x: 0, y: 0.08542558, z: 0, w: 0.9963446}
   m_LocalPosition: {x: 1.21, y: 16.32, z: -23.03}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
@@ -559,12 +560,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 786897307902362205}
-  speed: 2
-  rotationSpeed: 6
+  speed: 7
+  rotationSpeed: 10
   life: 3
   resetPosition: 0
   endscreen: {fileID: 0}
-  winscreen: {fileID: 0}
   highScoreScreen: {fileID: 0}
   scoreText: {fileID: 0}
   scoreCalculator: {fileID: 0}
@@ -572,6 +572,20 @@ MonoBehaviour:
   walkingSound: {fileID: 786897308684124817}
   collect: {fileID: 0}
   coinSound: {fileID: 0}
+--- !u!136 &1390049969
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786897307909505787}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 2, z: 1}
 --- !u!1 &786897307909508133
 GameObject:
   m_ObjectHideFlags: 0

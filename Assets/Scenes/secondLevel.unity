@@ -19032,8 +19032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 786897308891510782}
-  speed: 2
-  rotationSpeed: 6
+  speed: 7
+  rotationSpeed: 10
   life: 3
   resetPosition: 0
   endscreen: {fileID: 609279066}
@@ -19679,6 +19679,7 @@ GameObject:
   - component: {fileID: 786897308222532981}
   - component: {fileID: 786897308222532977}
   - component: {fileID: 786897308222532980}
+  - component: {fileID: 786897308899250675}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -20077,6 +20078,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 9.801, z: 0}
+--- !u!136 &786897308899250675
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786897308899047256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 2, z: 1}
 --- !u!4 &786897308899251536
 Transform:
   m_ObjectHideFlags: 0

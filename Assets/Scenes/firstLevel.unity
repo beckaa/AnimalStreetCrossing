@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
       propertyPath: collect
       value: 
       objectReference: {fileID: 884954575}
@@ -150,6 +154,10 @@ PrefabInstance:
       propertyPath: winscreen
       value: 
       objectReference: {fileID: 217634828}
+    - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
+      propertyPath: rotationSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 786897307501828311, guid: 92cb3321517eb084ea81f76eae765289, type: 3}
       propertyPath: highScoreScreen
       value: 
@@ -1276,6 +1284,10 @@ PrefabInstance:
     - target: {fileID: 1164859811473632216, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
       propertyPath: m_Name
       value: LooseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164859811473632216, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1164859811473632221, guid: 80ff3515485651748beaf53a5b3a346a, type: 3}
       propertyPath: m_Pivot.x

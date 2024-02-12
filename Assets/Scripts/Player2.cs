@@ -66,7 +66,7 @@ public class Player2 : MonoBehaviour
         else if(Input.GetAxis("Vertical")>0)
         {
             // move if w or upwards arrow is pressed
-            moveForward = Input.GetAxis("Vertical") * speed;
+            moveForward = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         }
         jump();
         move = this.transform.forward * moveForward;
@@ -177,12 +177,6 @@ public class Player2 : MonoBehaviour
             
         }
 
-       /* if (hit.gameObject.tag == "car" && !resetPosition)
-        {
-            detectDamage(hit);
-            resetPosition = true;
-            controller.enabled = false;
-        }*/
         if (hit.gameObject.tag == "finishline")
         {
             scoreText.text = "Your Score: " + scoreCalculator.getPoints().ToString();
