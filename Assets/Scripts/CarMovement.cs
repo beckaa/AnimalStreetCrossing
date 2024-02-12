@@ -11,6 +11,7 @@ public class CarMovement : MonoBehaviour
     private float time;
     private float waitTime;
     public AudioSource startCarSound;
+    public Player2 player;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,8 +78,13 @@ public class CarMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        speed = (speed - (speed / 2)) * -1; //half the speed
-        position = transform.position;
-        hitSomething = true;
+        if (!player.resetPosition)
+        {
+            speed = (speed - (speed / 2)) * -1; //half the speed
+            player.decreaseLife(1);
+            position = transform.position;
+            hitSomething = true;
+            player.resetPosition = true;
+        }
     }
 }

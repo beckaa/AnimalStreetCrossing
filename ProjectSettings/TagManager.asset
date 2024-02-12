@@ -12,6 +12,8 @@ TagManager:
   - finishline
   - inGameSounds
   - mainMenu
+  - coin
+  - turkey
   layers:
   - Default
   - TransparentFX

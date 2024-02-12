@@ -9,7 +9,7 @@ public class GameUI : MonoBehaviour
 {
     public GameObject lifeContainer;
     public ScoreCalculator score;
-    public Player player;
+    public Player2 player;
     public Image heart;
     public TMP_Text coinText;
     public GameObject pauseMenu;

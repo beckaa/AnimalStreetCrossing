@@ -307,7 +307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 157538, guid: 7c1716c1e067ded44af1dbfe0c4b32ae, type: 3}
       propertyPath: m_Name
-      value: Truck_2_Blue Variant
+      value: Truck_2_Blue
       objectReference: {fileID: 0}
     - target: {fileID: 157538, guid: 7c1716c1e067ded44af1dbfe0c4b32ae, type: 3}
       propertyPath: m_Layer
@@ -331,15 +331,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456038, guid: 7c1716c1e067ded44af1dbfe0c4b32ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.68
+      value: 25.334425
       objectReference: {fileID: 0}
     - target: {fileID: 456038, guid: 7c1716c1e067ded44af1dbfe0c4b32ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.83
+      value: 0.32999992
       objectReference: {fileID: 0}
     - target: {fileID: 456038, guid: 7c1716c1e067ded44af1dbfe0c4b32ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.7
+      value: -0.19999981
       objectReference: {fileID: 0}
     - target: {fileID: 456038, guid: 7c1716c1e067ded44af1dbfe0c4b32ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -390,7 +390,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &951598391
 BoxCollider:
@@ -419,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   startCarSound: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &951598390
 MonoBehaviour:
   m_ObjectHideFlags: 0
