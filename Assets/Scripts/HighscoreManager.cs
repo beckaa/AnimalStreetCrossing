@@ -73,7 +73,6 @@ public class HighscoreManager : MonoBehaviour
     private void Update()
     {
         saveNewScore();
-        //updateUI();
     }
     private void loadFile()
     {
