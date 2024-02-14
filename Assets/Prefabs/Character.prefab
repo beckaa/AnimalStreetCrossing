@@ -542,15 +542,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f9017e93656934bb19b96fe01ebd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreCalculator: {fileID: 0}
   animator: {fileID: 786897307902362205}
-  speed: 7
-  rotationSpeed: 10
-  life: 3
   resetPosition: 0
+  speed: 6
+  rotationSpeed: 8
+  life: 3
   endscreen: {fileID: 0}
   highScoreScreen: {fileID: 0}
   scoreText: {fileID: 0}
-  scoreCalculator: {fileID: 0}
   whimper: {fileID: 786897307501828306}
   walkingSound: {fileID: 786897308684124817}
   collect: {fileID: 0}

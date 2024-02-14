@@ -19,7 +19,7 @@ public class Player2 : MonoBehaviour
     public float rotationSpeed = 4f;
     public int life;
     private CharacterController controller;
-    private float jumpHeight = 3f;
+    private float jumpHeight = 4f;
     private float jumping;
 
     [Header("UI Screens")]
@@ -48,8 +48,11 @@ public class Player2 : MonoBehaviour
         {
             Invoke("resetPlayer", 1.5f);
         }
-        forward();
-        rotatePlayerWithTerrain();
+        else
+        {
+            forward();
+            rotatePlayerWithTerrain();
+        }      
     }
 
     /*moves the player forward*/
@@ -95,7 +98,7 @@ public class Player2 : MonoBehaviour
         }
         else
         {
-            jumping -= 2;
+            jumping -= 1;
         }
 
     }
@@ -130,13 +133,13 @@ public class Player2 : MonoBehaviour
     /*resets the players position to the start of the game if the player fell into a river or bumped into other obstacles*/
     public void resetPlayer()
     {
-            transform.position = startPosition;
-            transform.rotation = startRotation;
-            animator.SetBool("damage", false);
-            lastCollided = null;
-            resetPosition = false;
-            detectDeath();
-            controller.enabled = true;
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+        animator.SetBool("damage", false);
+        lastCollided = null;
+        resetPosition = false;
+        detectDeath();
+        controller.enabled = true;
     }
     //detects if the player died
     private void detectDeath()
