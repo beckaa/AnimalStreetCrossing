@@ -5,30 +5,29 @@ using TMPro;
 
 public class Player2 : MonoBehaviour
 {
+
+    [Header("Gameplay variables")]
+    public ScoreCalculator scoreCalculator;
     public Animator animator;
     private GameObject lastCollided;
-    private float time, waitTime;
-    //player attributes
-    private CharacterController controller;
+    public bool resetPosition;
+    Quaternion startRotation;
+    Vector3 move, startPosition;
+
+    [Header("Player")]
     public float speed = 2f;
     public float rotationSpeed = 4f;
-    Vector3 move, startPosition;
     public int life;
+    private CharacterController controller;
     private float jumpHeight = 3f;
     private float jumping;
 
-    public bool resetPosition;
-    Quaternion startRotation;
-
-    //UI screens
+    [Header("UI Screens")]
     public GameObject endscreen;
     public GameObject highScoreScreen;
     public TMP_Text scoreText;
 
-    //Score Calculator
-    public ScoreCalculator scoreCalculator;
-
-    //audio
+    [Header("Audio Sources")]
     public AudioSource whimper;
     public AudioSource walkingSound;
     public AudioSource collect;
@@ -38,21 +37,22 @@ public class Player2 : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         life = 3;
+        //save start position and rotation for resetting
         startRotation = transform.rotation;
         startPosition = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (resetPosition)
         {
             Invoke("resetPlayer", 1.5f);
         }
-        //jump();
         forward();
         rotatePlayerWithTerrain();
     }
+
+    /*moves the player forward*/
     void forward()
     {
         animator.SetFloat("forwards", Input.GetAxis("Vertical"));
@@ -67,6 +67,10 @@ public class Player2 : MonoBehaviour
         {
             // move if w or upwards arrow is pressed
             moveForward = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+            if (!walkingSound.isPlaying && Time.timeScale >0)
+            {
+                walkingSound.Play();
+            }
         }
         jump();
         move = this.transform.forward * moveForward;
@@ -123,7 +127,7 @@ public class Player2 : MonoBehaviour
         }
         
     }
-    /*resets the players position to the start of the game if the player fell into a river*/
+    /*resets the players position to the start of the game if the player fell into a river or bumped into other obstacles*/
     public void resetPlayer()
     {
             transform.position = startPosition;
@@ -131,13 +135,10 @@ public class Player2 : MonoBehaviour
             animator.SetBool("damage", false);
             lastCollided = null;
             resetPosition = false;
-            //detect Death
-            if (life == 0)
-            {
-                detectDeath();
-            }
-        controller.enabled = true;
+            detectDeath();
+            controller.enabled = true;
     }
+    //detects if the player died
     private void detectDeath()
     {
         if (life == 0)
@@ -166,6 +167,7 @@ public class Player2 : MonoBehaviour
         life -= 1;
     }
 
+    /*detects the collision with the character controller capsule collider*/
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(hit.gameObject.tag == "river" && !resetPosition)
