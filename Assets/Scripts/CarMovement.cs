@@ -22,18 +22,20 @@ public class CarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate( speed*Time.deltaTime, 0,0);
-        cycleCar();
-        if (hitSomething)
+        if(!player.resetPosition)
         {
-            setCarBack();
+            transform.Translate(speed * Time.deltaTime, 0, 0);
+            cycleCar();
+            if (hitSomething)
+            {
+                setCarBack();
+            }
+            else
+            {
+                speed = initialSpeed;
+            }
+            time += Time.deltaTime;
         }
-        else
-        {
-            speed = initialSpeed;
-        }
-        time += Time.deltaTime;
-
     }
     //if the car collides with anything the driver gets shocked and drives backwards for a bit
     void setCarBack()
