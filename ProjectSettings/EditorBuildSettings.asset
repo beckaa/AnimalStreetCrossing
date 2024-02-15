@@ -13,8 +13,8 @@ EditorBuildSettings:
     guid: db46c78c7a7a5a3409bdf71351e9134d
   - enabled: 1
     path: Assets/Scenes/levelZero.unity
-    guid: 2b9da8c4fbe77f74491024e3ea2b6f43
-  - enabled: 1
+    guid: 1e197a0ce95ba164a95794c3324fa91f
+  - enabled: 0
     path: Assets/Scenes/firstLevel.unity
     guid: be1cc26bb55cf904f830187b973bb3b4
   - enabled: 1
