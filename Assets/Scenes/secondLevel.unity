@@ -1971,6 +1971,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1883520052294481476, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883520052294481530, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1883520053101835984, guid: 4c38176222f526d4590354ec62ff6250, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16690,7 +16698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980613756, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
       propertyPath: speed
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 980613756, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
       propertyPath: player
@@ -17678,7 +17686,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980613756, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
       propertyPath: speed
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 980613756, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
       propertyPath: player
