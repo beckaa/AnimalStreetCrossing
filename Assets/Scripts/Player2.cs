@@ -19,7 +19,7 @@ public class Player2 : MonoBehaviour
     public float rotationSpeed = 4f;
     public int life;
     private CharacterController controller;
-    private float jumpHeight = 2.8f;
+    private float jumpHeight = 3.4f;
     private float jumping;
 
     [Header("UI Screens")]
