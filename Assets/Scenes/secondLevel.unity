@@ -19031,15 +19031,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f9017e93656934bb19b96fe01ebd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreCalculator: {fileID: 684188635}
   animator: {fileID: 786897308891510782}
+  resetPosition: 0
   speed: 7
   rotationSpeed: 10
   life: 3
-  resetPosition: 0
   endscreen: {fileID: 609279066}
   highScoreScreen: {fileID: 1072312343}
   scoreText: {fileID: 380315837}
-  scoreCalculator: {fileID: 684188635}
   whimper: {fileID: 786897308222532977}
   walkingSound: {fileID: 786897307191686962}
   collect: {fileID: 22323151}

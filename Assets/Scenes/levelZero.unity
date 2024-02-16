@@ -6925,6 +6925,10 @@ PrefabInstance:
       propertyPath: startCarSound
       value: 
       objectReference: {fileID: 391247037}
+    - target: {fileID: 951598392, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5799253095936638489, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_Name
       value: Truck_2_Blue

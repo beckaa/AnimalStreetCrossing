@@ -14,12 +14,12 @@ public class Player2 : MonoBehaviour
     Quaternion startRotation;
     Vector3 move, startPosition;
 
-    [Header("Player")]
+    [Header("Player attributes")]
     public float speed = 2f;
     public float rotationSpeed = 4f;
     public int life;
     private CharacterController controller;
-    private float jumpHeight = 4f;
+    private float jumpHeight = 3f;
     private float jumping;
 
     [Header("UI Screens")]
@@ -98,7 +98,7 @@ public class Player2 : MonoBehaviour
         }
         else
         {
-            jumping -= 1;
+            jumping -= 0.75f;
         }
 
     }
