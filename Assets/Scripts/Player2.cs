@@ -19,7 +19,7 @@ public class Player2 : MonoBehaviour
     public float rotationSpeed = 4f;
     public int life;
     private CharacterController controller;
-    private float jumpHeight = 2.6f;
+    private float jumpHeight = 15f;
     private float jumping;
 
     [Header("UI Screens")]
@@ -40,6 +40,7 @@ public class Player2 : MonoBehaviour
         //save start position and rotation for resetting
         startRotation = transform.rotation;
         startPosition = transform.position;
+        jumpHeight *= Time.deltaTime * 9.81f;
     }
 
     void Update()
@@ -98,7 +99,7 @@ public class Player2 : MonoBehaviour
         }
         else
         {
-            jumping -= 0.5f;
+            jumping -= 9.81f*Time.deltaTime;
         }
 
     }
