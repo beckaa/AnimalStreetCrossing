@@ -56,7 +56,7 @@ public class HighscoreManager : MonoBehaviour
     public GameObject popup;
     public GameObject panelHighscore;
     public ScoreCalculator calculator;
-    GameObject[] items = new GameObject[10];
+    public GameObject[] items = new GameObject[10];
     int index = -1;
 
     private void Awake()
@@ -100,13 +100,10 @@ public class HighscoreManager : MonoBehaviour
         {
             for (int i = 0; i < ranking.Length; i++)
             {
-                Vector3 position = new Vector3(parentPlane.transform.position.x, parentPlane.transform.position.y - 35 - 20 * i, 0);
-                GameObject item = Instantiate(listItem, position, Quaternion.identity, listItem.transform.parent);
-                item.transform.GetChild(0).GetComponent<TMP_Text>().text = ranking[i].rank;
-                item.transform.GetChild(1).GetComponent<TMP_Text>().text = ranking[i].getplayername();
-                item.transform.GetChild(2).GetComponent<TMP_Text>().text = ranking[i].getScore();
-                item.SetActive(true);
-                items[i] = item;
+                items[i].transform.GetChild(0).GetComponent<TMP_Text>().text = ranking[i].rank;
+                items[i].transform.GetChild(1).GetComponent<TMP_Text>().text = ranking[i].getplayername();
+                items[i].transform.GetChild(2).GetComponent<TMP_Text>().text = ranking[i].getScore();
+                items[i].SetActive(true);
             }
         }
         else
@@ -114,16 +111,13 @@ public class HighscoreManager : MonoBehaviour
             //create new ranking for level if it does not exist
             for (int i = 0; i < 10; i++)
             {
-                Vector3 position = new Vector3(parentPlane.transform.position.x, parentPlane.transform.position.y - 35 - 20 * i, 0);
-                GameObject item = Instantiate(listItem, position, Quaternion.identity, listItem.transform.parent);
                 string rank = (i + 1).ToString();
                 highScoreentry newEntry = new highScoreentry(rank,"Your Name","0");
-                item.transform.GetChild(0).GetComponent<TMP_Text>().text = rank;
-                item.transform.GetChild(1).GetComponent<TMP_Text>().text = "Your Name";
-                item.transform.GetChild(2).GetComponent<TMP_Text>().text = "0";
-                item.SetActive(true);
+                items[i].transform.GetChild(0).GetComponent<TMP_Text>().text = rank;
+                items[i].transform.GetChild(1).GetComponent<TMP_Text>().text = "Your Name";
+                items[i].transform.GetChild(2).GetComponent<TMP_Text>().text = "0";
+                items[i].SetActive(true);
                 ranking[i] = newEntry;
-                items[i] = item;
             }
         }
         

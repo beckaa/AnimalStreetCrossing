@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1321056362}
-  m_IndirectSpecularColor: {r: 0.0039375583, g: 0.0049425503, b: 0.01200694, a: 1}
+  m_IndirectSpecularColor: {r: 0.0039375615, g: 0.004942556, b: 0.012006953, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19042,9 +19042,10 @@ MonoBehaviour:
   scoreCalculator: {fileID: 684188635}
   animator: {fileID: 786897308891510782}
   resetPosition: 0
-  speed: 7
-  rotationSpeed: 10
+  speed: 10
+  rotationSpeed: 3
   life: 3
+  controller: {fileID: 0}
   endscreen: {fileID: 609279066}
   highScoreScreen: {fileID: 1072312343}
   scoreText: {fileID: 380315837}
@@ -20070,7 +20071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786897308899047256}
   m_LocalRotation: {x: -0, y: 0.08542501, z: -0, w: 0.9963446}
-  m_LocalPosition: {x: -12.01, y: 16.54, z: -21.72}
+  m_LocalPosition: {x: -12.01, y: 16.71687, z: -21.72}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:

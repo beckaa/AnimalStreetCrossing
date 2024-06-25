@@ -91,6 +91,7 @@ public class CarMovement : MonoBehaviour
             speed = (speed - (speed / 2)) * -1; //half the speed
             position = transform.position;
             hitSomething = true;
+            player.controller.enabled = false;
             player.resetPosition = true;
             player.detectDamage(other);
         }
