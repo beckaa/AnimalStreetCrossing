@@ -5,7 +5,7 @@ using TMPro;
 
 public class Player2 : MonoBehaviour
 {
-
+    
     [Header("Gameplay variables")]
     public ScoreCalculator scoreCalculator;
     public Animator animator;
@@ -13,14 +13,17 @@ public class Player2 : MonoBehaviour
     public bool resetPosition;
     Quaternion startRotation;
     Vector3 move, startPosition;
+    bool playerMoves = false;
 
     [Header("Player attributes")]
     public float speed = 2f;
-    public float rotationSpeed = 4f;
+    public float rotationSpeed = 2f;
     public int life;
-    private CharacterController controller;
-    private float jumpHeight = 2.8f;
+    public CharacterController controller;
+    private float jumpHeight = 4f;
     private float jumping;
+    private float jumpSpeed = 2f;
+    private float gravity = 6.81f;
 
     [Header("UI Screens")]
     public GameObject endscreen;
@@ -75,9 +78,17 @@ public class Player2 : MonoBehaviour
                 walkingSound.Play();
             }
         }
+        if(moveForward > 0)
+        {
+            playerMoves = true;
+        }
+        else
+        {
+            playerMoves = false;
+        }
         jump();
         move = this.transform.forward * moveForward;
-        move.y = jumping;
+        move.y = jumping* (Time.deltaTime*jumpSpeed);
         Vector3 rotate = new Vector3(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
         if (Time.timeScale > 0) //prevent character from moving if game was paused
         {
@@ -96,10 +107,17 @@ public class Player2 : MonoBehaviour
                 jumping =jumpHeight;
             }
         }
-        else if(!controller.isGrounded)
+        else
         {
-            jumping -= 9.81f*Time.deltaTime;
-            Debug.Log(jumping);
+            if (!controller.isGrounded)
+            {
+                jumping -= gravity * Time.deltaTime;
+            }
+            else
+            {
+                jumping = 0f;
+            }
+            
         }
 
     }
@@ -123,7 +141,7 @@ public class Player2 : MonoBehaviour
         if (Time.timeScale > 0)
         {
             RaycastHit output;
-            if (Physics.Raycast(transform.position, Vector3.down, out output))
+            if (Physics.Raycast(transform.position, Vector3.down, out output) && playerMoves)
             {
                 var newRotation = Quaternion.LookRotation(Vector3.Cross(transform.right, output.normal));
                 transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, 2 * Time.deltaTime);
@@ -134,13 +152,13 @@ public class Player2 : MonoBehaviour
     /*resets the players position to the start of the game if the player fell into a river or bumped into other obstacles*/
     public void resetPlayer()
     {
-        transform.position = startPosition;
-        transform.rotation = startRotation;
+            transform.position = startPosition;
+           transform.rotation = startRotation;
         animator.SetBool("damage", false);
-        lastCollided = null;
-        resetPosition = false;
-        detectDeath();
-        controller.enabled = true;
+            lastCollided = null;
+            resetPosition = false;
+            detectDeath();
+            controller.enabled = true; 
     }
     //detects if the player died
     private void detectDeath()
@@ -174,13 +192,13 @@ public class Player2 : MonoBehaviour
     /*detects the collision with the character controller capsule collider*/
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.gameObject.tag == "river" && !resetPosition)
+        if (hit.gameObject.tag == "river" && !resetPosition)
         {
             resetPosition = true;
             detectDamage(hit);
             controller.enabled = false;
             lastCollided = hit.gameObject;
-            
+
         }
 
         if (hit.gameObject.tag == "finishline")
@@ -199,12 +217,12 @@ public class Player2 : MonoBehaviour
         }
         if (hit.gameObject.tag == "turkey")
         {
-            if(life < 3)
+            if (life < 3)
             {
                 collect.Play();
                 increaseLife(1);
                 Destroy(hit.gameObject);
-            }  
+            }
         }
     }
     

@@ -545,8 +545,8 @@ MonoBehaviour:
   scoreCalculator: {fileID: 0}
   animator: {fileID: 786897307902362205}
   resetPosition: 0
-  speed: 6
-  rotationSpeed: 8
+  speed: 10
+  rotationSpeed: 3
   life: 3
   endscreen: {fileID: 0}
   highScoreScreen: {fileID: 0}
