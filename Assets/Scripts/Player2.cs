@@ -104,7 +104,12 @@ public class Player2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                animator.SetBool("jump", true);
                 jumping =jumpHeight;
+            }
+            else
+            {
+                animator.SetBool("jump", false);
             }
         }
         else
