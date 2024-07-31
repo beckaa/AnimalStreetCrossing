@@ -21306,6 +21306,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_1_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 4440539156631066511, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
+      propertyPath: m_Volume
+      value: 0.644
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440539156631066511, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91049ed7b208c0e439d08d59058f5a9f, type: 3}
 --- !u!1001 &2170443455069883729
@@ -21490,6 +21498,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 926479200}
     m_Modifications:
+    - target: {fileID: 3582058213741101116, guid: 137f30b263b94e44e9632dd4857dfc17, type: 3}
+      propertyPath: m_Volume
+      value: 0.495
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582058213741101116, guid: 137f30b263b94e44e9632dd4857dfc17, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582058213741101116, guid: 137f30b263b94e44e9632dd4857dfc17, type: 3}
+      propertyPath: MinDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3582058213741101118, guid: 137f30b263b94e44e9632dd4857dfc17, type: 3}
       propertyPath: m_Name
       value: waterSound
@@ -21565,7 +21585,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 469d842a5521f7e459cc37827c7b75eb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.685
+  m_Volume: 0.644
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21574,7 +21594,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 9
-  MaxDistance: 10
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -21763,6 +21783,14 @@ PrefabInstance:
     - target: {fileID: 951598392, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856183637054326777, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+      propertyPath: m_Volume
+      value: 0.644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856183637054326777, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
+      propertyPath: MaxDistance
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5799253095936638489, guid: d8cd5b245df9f574e8be0fbb25e55523, type: 3}
       propertyPath: m_Name
