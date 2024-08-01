@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 5674184a87d87e54ca8047426601a57b
-labels:
-- Nature
-- Pattern
-- Sand
-- Stone
-- Terrain
-- Shell
-- Weeds
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:18ebff79795f1f55cf0d278af72f72c52c071f0bbe6e910a8e9d919a1ef13ac0
+size 266

@@ -1,12 +1,3 @@
-fileFormatVersion: 2
-guid: cd5a615f62153e041b89bd8f466af5ab
-labels:
-- lowpoly
-- vehicle
-- car
-timeCreated: 1513013833
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:77ea098c222146e2a495101b8a722d4845bd8ec401eb8a1645b290d9fb6fbe82
+size 227

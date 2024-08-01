@@ -1,8 +1,3 @@
-HDR Image was taken from:
-http://www.hdri-hub.com/hdrishop/freesamples/freehdri/item/76-hdr-sky-cloudy
-
-Released under Creative Commons Attribution 3.0 Unported License.
-
-
-For rendering setup I've used allegorithmic guideline on Substance to unity workflow which can be found here:
-https://support.allegorithmic.com/documentation/display/SPDOC/Unity+5
+version https://git-lfs.github.com/spec/v1
+oid sha256:c14e7e6533f9613cec0b2ddc0183074e893957b28cfb80f7b2a78696256e57e6
+size 358

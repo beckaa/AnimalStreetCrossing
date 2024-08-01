@@ -1,24 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ScoreCalculator : MonoBehaviour
-{
-    //TODO: increase score if the player reaches the finishline and has time left (set a timer) ??
-    int points;
-    public int numberOfCoins;
-    public int getPoints()
-    {
-        return points;
-    }
-    public void increasePoints(int number)
-    {
-        points += number;
-    }
-    public void resetPoints()
-    {
-        points = 0;
-        numberOfCoins = 0;
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1087dbb51b467c2770ed187a2633f8ed405e6c0ee061c70409fac6627563852a
+size 531

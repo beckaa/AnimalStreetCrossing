@@ -1,20 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class playSound : MonoBehaviour
-{
-    public string[] collisionTag;
-    public AudioSource audioSource;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        foreach (string s in collisionTag){
-            if (other.gameObject.tag == s)
-            {
-                audioSource.Play();
-            }
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d124d17b4ce650f0079950f68e98f84cf740dc99df022b0a0c239548e93f5ad5
+size 436

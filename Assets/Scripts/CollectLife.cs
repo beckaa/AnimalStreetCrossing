@@ -1,26 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CollectLife : MonoBehaviour
-{
-    public Player2 player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Collider collider = this.gameObject.GetComponent<Collider>();
-    }
-
-    // Update is called once per frame
-     void Update()
-    {
-        if (player.getLife() < 3)
-        {
-            GetComponent<Collider>().enabled = true;
-        }
-        else
-        {
-            GetComponent<Collider>().enabled = false;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fa2e91e7edb9d805b2058c1722a04ab0490677797e2970a18fd42adfcca4af7
+size 731

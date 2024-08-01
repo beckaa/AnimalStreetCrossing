@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: 893960384de673345a82517892b28bc7
-labels:
-- Grass
-- Ground
-- Nature
-- Pattern
-- Terrain
-- Leafs
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a2b18cbffbccfe5231c2ab1a4d605a746ea332dc96dd4656db7af0fd30fdaef
+size 259

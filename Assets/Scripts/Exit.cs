@@ -1,14 +1,3 @@
-using UnityEngine;
-using UnityEditor;
-
-public class Exit : MonoBehaviour
-{
-    public void exitGame()
-    {
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #else
-        Application.Quit(); 
-        #endif
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5130713cc02ba5920b108e3ddebfe07c65a55dfa41c1c611382a74d96aa405cd
+size 270

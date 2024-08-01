@@ -1,12 +1,3 @@
-fileFormatVersion: 2
-guid: 4c1181499180eff409a0809517ff1937
-labels:
-- lowpoly
-- vehicle
-- truck
-timeCreated: 1513013841
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:41fde0bda931e7889b64a211fca7fa4d4bba0b578f15c6eaabe80d8c9ead7572
+size 229

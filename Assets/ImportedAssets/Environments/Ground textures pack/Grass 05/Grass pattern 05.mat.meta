@@ -1,10 +1,3 @@
-fileFormatVersion: 2
-guid: 49c3c02661a83fd42b33859cfbf9a17d
-labels:
-- Pattern
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7e9308e4361357fc1b70ab76239b1fd4c1323e1ac55219ac218536467631e1b
+size 210

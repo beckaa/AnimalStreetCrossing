@@ -1,1 +1,3 @@
-{"id":1,"list":[{"rank":"1","playername":"Your Name","score":"0"},{"rank":"2","playername":"Your Name","score":"0"},{"rank":"3","playername":"Your Name","score":"0"},{"rank":"4","playername":"Your Name","score":"0"},{"rank":"5","playername":"Your Name","score":"0"},{"rank":"6","playername":"Your Name","score":"0"},{"rank":"7","playername":"Your Name","score":"0"},{"rank":"8","playername":"Your Name","score":"0"},{"rank":"9","playername":"Your Name","score":"0"},{"rank":"10","playername":"Your Name","score":"0"}]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:022c67a90a3c39de225b7424db7d7c4b1b7348a997b541ddbd805edccdec1655
+size 518
